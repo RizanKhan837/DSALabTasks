@@ -1,0 +1,14 @@
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\bin\Debug\netcoreapp3.1\DSALab_1.exe
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\bin\Debug\netcoreapp3.1\DSALab_1.deps.json
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\bin\Debug\netcoreapp3.1\DSALab_1.runtimeconfig.json
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\bin\Debug\netcoreapp3.1\DSALab_1.runtimeconfig.dev.json
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\bin\Debug\netcoreapp3.1\DSALab_1.dll
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\bin\Debug\netcoreapp3.1\DSALab_1.pdb
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\obj\Debug\netcoreapp3.1\DSALab_1.csproj.AssemblyReference.cache
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\obj\Debug\netcoreapp3.1\DSALab_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\obj\Debug\netcoreapp3.1\DSALab_1.AssemblyInfoInputs.cache
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\obj\Debug\netcoreapp3.1\DSALab_1.AssemblyInfo.cs
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\obj\Debug\netcoreapp3.1\DSALab_1.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\obj\Debug\netcoreapp3.1\DSALab_1.dll
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\obj\Debug\netcoreapp3.1\DSALab_1.pdb
+C:\Users\HP\OneDrive\DSA Lab Tasks\DSALab_1\obj\Debug\netcoreapp3.1\DSALab_1.genruntimeconfig.cache
