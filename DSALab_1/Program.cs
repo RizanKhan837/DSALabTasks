@@ -46,7 +46,7 @@ namespace DSALabTasks
             average(arr);*/
 
             /* Task 04 */
-            Console.Write("Input Row: ");
+            /*Console.Write("Input Row: ");
             int row = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input Col: ");
             int col = Convert.ToInt32(Console.ReadLine());
@@ -102,39 +102,40 @@ namespace DSALabTasks
                     Console.Write(sub[i, j] + "\t");
                 }
                 Console.WriteLine("\n");
-            }
+            }*/
 
 
 
             /* Task 05 */
-            /*int i, j, k;
-            int[,] matrix1 = new int[,] { { 3, 4 }, { 6, 7 } };
-            int[,] matrix2 = new int[,] { { 6, 4 }, { 5, 2 } };
-            if (matrix1.GetLength(1) != matrix2.GetLength(0))
-            {
-                Console.WriteLine("Matrix Not Possible");
-                Console.ReadLine();
-                Environment.Exit(0);
-            }
-            int[,] result = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
+            /*            int i, j, k;
+                        int[,] matrix1 = new int[,] { { 3, 4 }, { 6, 7 } };
+                        int[,] matrix2 = new int[,] { { 6, 4 }, { 5, 2 } };
+                        if (matrix1.GetLength(1) != matrix2.GetLength(0))
+                        {
+                            Console.WriteLine("Matrix Not Possible");
+                            Console.ReadLine();
+                            Environment.Exit(0);
+                        }
+                        int[,] result = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
 
-            for (i = 0; i < matrix1.GetLength(0); i++)
-            {
-                for (j = 0; j < matrix2.GetLength(1); j++)
-                {
-                    result[i, j] = 0;
-                    for (k = 0; k < matrix1.GetLength(1); k++)
-                    {
-                        result[i, j] += matrix1[i, k] * matrix2[k, j];
-                    }
-                }
-            }
-            Console.Write("Matrix Multiplication Of Two Above Matrices Are \n");
-            for (i = 0; i < result.GetLength(0); i++) {
-                for (j = 0; j < result.GetLength(1); j++)
-                    Console.Write("     {0}  ", result[i, j]);
-                Console.WriteLine();
-            }*/
+                        for (i = 0; i < matrix1.GetLength(0); i++)
+                        {
+                            for (j = 0; j < matrix2.GetLength(1); j++)
+                            {
+                                result[i, j] = 0;
+                                for (k = 0; k < matrix1.GetLength(1); k++)
+                                {
+                                    result[i, j] += matrix1[i, k] * matrix2[k, j];
+                                }
+                            }
+                        }
+                        Console.Write("Matrix Multiplication Of Two Above Matrices Are \n");
+                        for (i = 0; i < result.GetLength(0); i++)
+                        {
+                            for (j = 0; j < result.GetLength(1); j++)
+                                Console.Write("     {0}  ", result[i, j]);
+                            Console.WriteLine();
+                        }*/
 
             /* Task 06 */
             /*int[,] matrix = new int[,] { { 3, 4 },
@@ -150,8 +151,8 @@ namespace DSALabTasks
             Console.WriteLine("\nThe determinent of a 2*2 matrix is {0} ", res);*/
 
             /* Task 07 */
-            /*int[,] matrix = new int[,] { { 1, 3 },
-                                           { 4, 6 } };
+            int[,] matrix = new int[,] { { 4, 6 },
+                                           { 1, 2 } };
             double determinant = 0;
             int[,] adjoint = new int[2, 2];
             double[,] inverse = new double[2, 2];
@@ -168,7 +169,8 @@ namespace DSALabTasks
             adjoint[1, 1] = matrix[0, 0];
 
             Console.WriteLine("\nThe adjoint of a 2*2 matrix is");
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 2; i++)
+            {
                 for (int j = 0; j < 2; j++)
                     Console.Write("{0:0}  ", adjoint[i, j]);
                 Console.WriteLine();
@@ -183,7 +185,7 @@ namespace DSALabTasks
                     Console.Write("{0:0.0}  ", inverse[i, j]);
                 }
                 Console.WriteLine();
-            }*/
+            }
 
             Console.ReadLine();
 
