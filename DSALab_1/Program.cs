@@ -7,7 +7,7 @@ namespace DSALabTasks
         static void Main(string[] args)
         {
             /* Task 01 */
-            /*int[] arr = new int[10];
+            int[] arr = new int[10];
             Random random = new Random();
             Console.Write("Array Of Length 10: ");
             for (int i = 0; i < arr.Length; i++)
@@ -17,7 +17,7 @@ namespace DSALabTasks
             }
             Console.WriteLine();
 
-            *//* Task 01 (a)*//*
+            Task 01(a)
             Console.Write("\nPairs Of 25 Are : ");
             for (int i = 0; i < arr.Length; i++)
             {
@@ -28,7 +28,7 @@ namespace DSALabTasks
                 }
             }
             Console.WriteLine();
-            *//* Task 01 (b)*//*
+            Task 01(b)
             int even = 0;
             int odd = 0;
             for (int i = 1; i < arr.Length; i++)
@@ -41,12 +41,12 @@ namespace DSALabTasks
             Console.WriteLine("\nEven {0}", even);
             Console.WriteLine("Odd {0}", odd);
 
-            *//* Task 01 (c) *//*
+            Task 01(c)
             Console.WriteLine();
-            average(arr);*/
+            average(arr);
 
             /* Task 04 */
-            Console.Write("Input Row: ");
+            /*Console.Write("Input Row: ");
             int row = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input Col: ");
             int col = Convert.ToInt32(Console.ReadLine());
@@ -103,7 +103,7 @@ namespace DSALabTasks
                     Console.Write(sub[i, j] + "\t");
                 }
                 Console.WriteLine("\n");
-            }
+            }*/
 
 
 
