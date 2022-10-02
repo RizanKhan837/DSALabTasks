@@ -107,38 +107,38 @@ namespace DSALabTasks
 
 
             /* Task 05 */
-            /*            int i, j, k;
-                        int[,] matrix1 = new int[,] { { 3, 4 }, { 6, 7 } };
-                        int[,] matrix2 = new int[,] { { 6, 4 }, { 5, 2 } };
-                        if (matrix1.GetLength(1) != matrix2.GetLength(0))
-                        {
-                            Console.WriteLine("Matrix Not Possible");
-                            Console.ReadLine();
-                            Environment.Exit(0);
-                        }
-                        int[,] result = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
+            int i, j, k;
+            int[,] matrix1 = new int[,] { { 3, 4 }, { 6, 7 } };
+            int[,] matrix2 = new int[,] { { 6, 4 }, { 5, 2 } };
+            if (matrix1.GetLength(1) != matrix2.GetLength(0))
+            {
+                Console.WriteLine("Matrix Not Possible");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+            int[,] result = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
 
-                        for (i = 0; i < matrix1.GetLength(0); i++)
-                        {
-                            for (j = 0; j < matrix2.GetLength(1); j++)
-                            {
-                                result[i, j] = 0;
-                                for (k = 0; k < matrix1.GetLength(1); k++)
-                                {
-                                    result[i, j] += matrix1[i, k] * matrix2[k, j];
-                                }
-                            }
-                        }
-                        Console.Write("Matrix Multiplication Of Two Above Matrices Are \n");
-                        for (i = 0; i < result.GetLength(0); i++)
-                        {
-                            for (j = 0; j < result.GetLength(1); j++)
-                                Console.Write("     {0}  ", result[i, j]);
-                            Console.WriteLine();
-                        }*/
+            for (i = 0; i < matrix1.GetLength(0); i++)
+            {
+                for (j = 0; j < matrix2.GetLength(1); j++)
+                {
+                    result[i, j] = 0;
+                    for (k = 0; k < matrix1.GetLength(1); k++)
+                    {
+                        result[i, j] += matrix1[i, k] * matrix2[k, j];
+                    }
+                }
+            }
+            Console.Write("Matrix Multiplication Of Two Above Matrices Are \n");
+            for (i = 0; i < result.GetLength(0); i++)
+            {
+                for (j = 0; j < result.GetLength(1); j++)
+                    Console.Write("     {0}  ", result[i, j]);
+                Console.WriteLine();
+            }
 
             /* Task 06 */
-            int[,] matrix = new int[,] { { 3, 4 },
+            /*int[,] matrix = new int[,] { { 3, 4 },
                                          { 6, 7 } };
             int res = 0;
             Console.WriteLine("\nThe original matrix is ");
@@ -149,7 +149,7 @@ namespace DSALabTasks
                 Console.WriteLine();
             }
             res = matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0];
-            Console.WriteLine("\nThe determinent of a 2*2 matrix is {0} ", res);
+            Console.WriteLine("\nThe determinent of a 2*2 matrix is {0} ", res);*/
 
             /* Task 07 */
             /*int[,] matrix = new int[,] { { 4, 6 },
