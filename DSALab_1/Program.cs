@@ -7,7 +7,7 @@ namespace DSALabTasks
         static void Main(string[] args)
         {
             /* Task 01 */
-            int[] arr = new int[10];
+            /*int[] arr = new int[10];
             Random random = new Random();
             Console.Write("Array Of Length 10: ");
             for (int i = 0; i < arr.Length; i++)
@@ -17,7 +17,7 @@ namespace DSALabTasks
             }
             Console.WriteLine();
 
-            Task 01(a)
+            *//* Task 01 (a)*//*
             Console.Write("\nPairs Of 25 Are : ");
             for (int i = 0; i < arr.Length; i++)
             {
@@ -28,7 +28,7 @@ namespace DSALabTasks
                 }
             }
             Console.WriteLine();
-            Task 01(b)
+            *//* Task 01 (b)*//*
             int even = 0;
             int odd = 0;
             for (int i = 1; i < arr.Length; i++)
@@ -41,9 +41,9 @@ namespace DSALabTasks
             Console.WriteLine("\nEven {0}", even);
             Console.WriteLine("Odd {0}", odd);
 
-            Task 01(c)
+            *//* Task 01 (c) *//*
             Console.WriteLine();
-            average(arr);
+            average(arr);*/
 
             /* Task 04 */
             /*Console.Write("Input Row: ");
@@ -76,8 +76,7 @@ namespace DSALabTasks
             }
             Console.WriteLine("Original Array \n");
 
-            for (int i = 0; i < row; i++)
-            {
+            for (int i = 0; i < row; i++) {
                 for (int j = 0; j < col; j++)
                     Console.Write(array1[i, j] + "\t");
                 Console.WriteLine("\n");
@@ -153,7 +152,7 @@ namespace DSALabTasks
             Console.WriteLine("\nThe determinent of a 2*2 matrix is {0} ", res);*/
 
             /* Task 07 */
-            /*int[,] matrix = new int[,] { { 4, 6 },
+            int[,] matrix = new int[,] { { 4, 6 },
                                            { 1, 2 } };
             double determinant = 0;
             int[,] adjoint = new int[2, 2];
@@ -187,7 +186,7 @@ namespace DSALabTasks
                     Console.Write("{0:0.0}  ", inverse[i, j]);
                 }
                 Console.WriteLine();
-            }*/
+            }
 
             Console.ReadLine();
 
