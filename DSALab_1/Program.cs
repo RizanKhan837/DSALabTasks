@@ -138,20 +138,21 @@ namespace DSALabTasks
                         }*/
 
             /* Task 06 */
-            /*int[,] matrix = new int[,] { { 3, 4 },
+            int[,] matrix = new int[,] { { 3, 4 },
                                          { 6, 7 } };
             int res = 0;
             Console.WriteLine("\nThe original matrix is ");
-            for (int i = 0; i < 2; i++) { 
+            for (int i = 0; i < 2; i++)
+            {
                 for (int j = 0; j < 2; j++)
                     Console.Write("{0:0}  ", matrix[i, j]);
                 Console.WriteLine();
             }
             res = matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0];
-            Console.WriteLine("\nThe determinent of a 2*2 matrix is {0} ", res);*/
+            Console.WriteLine("\nThe determinent of a 2*2 matrix is {0} ", res);
 
             /* Task 07 */
-            int[,] matrix = new int[,] { { 4, 6 },
+            /*int[,] matrix = new int[,] { { 4, 6 },
                                            { 1, 2 } };
             double determinant = 0;
             int[,] adjoint = new int[2, 2];
@@ -185,7 +186,7 @@ namespace DSALabTasks
                     Console.Write("{0:0.0}  ", inverse[i, j]);
                 }
                 Console.WriteLine();
-            }
+            }*/
 
             Console.ReadLine();
 
