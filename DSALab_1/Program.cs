@@ -46,7 +46,7 @@ namespace DSALabTasks
             average(arr);*/
 
             /* Task 04 */
-            /*Console.Write("Input Row: ");
+            Console.Write("Input Row: ");
             int row = Convert.ToInt32(Console.ReadLine());
             Console.Write("Input Col: ");
             int col = Convert.ToInt32(Console.ReadLine());
@@ -76,7 +76,8 @@ namespace DSALabTasks
             }
             Console.WriteLine("Original Array \n");
 
-            for (int i = 0; i < row; i++) {
+            for (int i = 0; i < row; i++)
+            {
                 for (int j = 0; j < col; j++)
                     Console.Write(array1[i, j] + "\t");
                 Console.WriteLine("\n");
@@ -102,12 +103,12 @@ namespace DSALabTasks
                     Console.Write(sub[i, j] + "\t");
                 }
                 Console.WriteLine("\n");
-            }*/
+            }
 
 
 
             /* Task 05 */
-            int i, j, k;
+            /*int i, j, k;
             int[,] matrix1 = new int[,] { { 3, 4 }, { 6, 7 } };
             int[,] matrix2 = new int[,] { { 6, 4 }, { 5, 2 } };
             if (matrix1.GetLength(1) != matrix2.GetLength(0))
@@ -135,7 +136,7 @@ namespace DSALabTasks
                 for (j = 0; j < result.GetLength(1); j++)
                     Console.Write("     {0}  ", result[i, j]);
                 Console.WriteLine();
-            }
+            }*/
 
             /* Task 06 */
             /*int[,] matrix = new int[,] { { 3, 4 },
