@@ -152,7 +152,7 @@ namespace DSALabTasks
             Console.WriteLine("\nThe determinent of a 2*2 matrix is {0} ", res);*/
 
             /* Task 07 */
-            int[,] matrix = new int[,] { { 4, 6 },
+            /*int[,] matrix = new int[,] { { 4, 6 },
                                            { 1, 2 } };
             double determinant = 0;
             int[,] adjoint = new int[2, 2];
@@ -186,7 +186,7 @@ namespace DSALabTasks
                     Console.Write("{0:0.0}  ", inverse[i, j]);
                 }
                 Console.WriteLine();
-            }
+            }*/
 
             Console.ReadLine();
 
