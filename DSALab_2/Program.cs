@@ -16,7 +16,7 @@ namespace DSALab_2
             selection_Sort(arr);
             displayArray(arr);*/
 
-            string[,] chemicals = { {"HCL", "12", "123" },
+            /*string[,] chemicals = { {"HCL", "12", "123" },
                                     { "CH3", "10", "321" },
                                     { "H2SO4", "24", "541"},
                                     { "NaCl", "23", "544"} };
@@ -54,7 +54,7 @@ namespace DSALab_2
                 Console.WriteLine();
             }
 
-            Console.ReadLine();
+            Console.ReadLine();*/
         }
 
         public static void selection_Sort(string[] str)
