@@ -52,9 +52,20 @@ namespace DSALab_2
                 for (int j = 0; j < chemicals.GetLength(1); j++)
                     Console.Write("{0}\t\t", chemicals[t, j]);
                 Console.WriteLine();
-            }
+            }*/
 
-            Console.ReadLine();*/
+            Console.Write("Input No. Of Products : ");
+            int len = Convert.ToInt32(Console.ReadLine());
+
+            string[,] products = new string[2, len];
+
+            input2dArray(products);
+
+
+            Console.ReadLine();
+
+
+
         }
 
         public static void selection_Sort(string[] str)
@@ -171,5 +182,19 @@ namespace DSALab_2
                 }
             }
         }
+
+        public static void input2dArray(string[,] arr) {
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    Console.Write("Input Product Name : ");
+                    arr[j, 0] = Console.ReadLine();
+                    Console.Write("Input Price : ");
+                    arr[j, 1] = Console.ReadLine();
+                }
+            }
+        }
+
     }
 }
