@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DSALab_2
 {
@@ -58,6 +60,7 @@ namespace DSALab_2
             int len = Convert.ToInt32(Console.ReadLine());
 
             string[,] products = new string[2, len];
+
 
             input2dArray(products);
 
