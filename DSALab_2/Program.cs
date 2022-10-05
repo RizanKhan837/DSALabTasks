@@ -8,8 +8,11 @@ namespace DSALab_2
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
+
+            /* Task 01*/
             //Selection_Sort(hello);
+
+            /* Task 02*/
 
             /*Console.Write("Input Length Of Array : ");
             int len = Convert.ToInt32(Console.ReadLine());
@@ -18,37 +21,14 @@ namespace DSALab_2
             selection_Sort(arr);
             displayArray(arr);*/
 
+            /* Task 03*/
+
             /*string[,] chemicals = { {"HCL", "12", "123" },
                                     { "CH3", "10", "321" },
                                     { "H2SO4", "24", "541"},
                                     { "NaCl", "23", "544"} };
 
             sortChemicals(chemicals);*/
-
-            /*int smallest;
-            string temp, temp2, temp3;
-            int n = chemicals.GetLength(0);
-            for (int i = 0; i < n - 1; i++)
-            {
-                smallest = i;
-                for (int j = i + 1; j < n; j++)
-                {
-                    if (int.Parse(chemicals[j, 1]) < int.Parse(chemicals[smallest, 1]))
-                        smallest = j;
-                }
-
-                temp = chemicals[smallest, 1];
-                temp2 = chemicals[smallest, 0];
-                temp3 = chemicals[smallest, 2];
-
-                chemicals[smallest, 0] = chemicals[i, 0];
-                chemicals[smallest, 1] = chemicals[i, 1];
-                chemicals[smallest, 2] = chemicals[i, 2];
-
-                chemicals[i, 1] = temp;
-                chemicals[i, 0] = temp2;
-                chemicals[i, 2] = temp3;
-            }*/
 
             /*Console.WriteLine("Chemicals\tVolume\tConcentration");
             for (int t = 0; t < chemicals.GetLength(0); t++)
@@ -58,13 +38,16 @@ namespace DSALab_2
                 Console.WriteLine();
             }*/
 
-            Console.Write("Input No. Of Products : ");
+
+            /* Task 05*/
+
+            /*Console.Write("Input No. Of Products : ");
             int len = Convert.ToInt32(Console.ReadLine());
 
             string[,] products = new string[len, 2];
 
             input2dArray(products);
-            sortProducts(products);
+            sortProducts(products);*/
 
 
             Console.ReadLine();
