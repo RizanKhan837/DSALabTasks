@@ -18,12 +18,12 @@ namespace DSALab_2
             selection_Sort(arr);
             displayArray(arr);*/
 
-            string[,] chemicals = { {"HCL", "12", "123" },
+            /*string[,] chemicals = { {"HCL", "12", "123" },
                                     { "CH3", "10", "321" },
                                     { "H2SO4", "24", "541"},
                                     { "NaCl", "23", "544"} };
 
-            sortChemicals(chemicals);
+            sortChemicals(chemicals);*/
 
             /*int smallest;
             string temp, temp2, temp3;
@@ -69,8 +69,6 @@ namespace DSALab_2
 
             Console.ReadLine();
 
-
-
         }
 
         public static void selection_Sort(string[] str)
@@ -91,8 +89,7 @@ namespace DSALab_2
                 str[smallest] = str[i];
                 str[i] = temp;
             }
-            foreach (var item in str)    
-            {
+            foreach (var item in str) {
                 Console.WriteLine(item);
             }
         }
