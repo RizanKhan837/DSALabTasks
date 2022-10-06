@@ -10,44 +10,65 @@ namespace DSALab_2
         {
 
             /* Task 01*/
-            //Selection_Sort(hello);
+            //sortingMenu();
 
             /* Task 02*/
 
-            /*Console.Write("Input Length Of Array : ");
-            int len = Convert.ToInt32(Console.ReadLine());
-            int[] arr = new int[len];
-            inputArray(arr);
+            /*string[] arr = { "Rizan", "Harry", "Steve", "Thor" };
+            Console.Write("Before Sorting : ");
+            displayArray(arr);
             selection_Sort(arr);
+            Console.Write("After Sorting : ");
             displayArray(arr);*/
+
+
 
             /* Task 03*/
 
-            /*string[,] chemicals = { {"HCL", "12", "123" },
+            string[,] chemicals = { {"HCL", "12", "123" },
                                     { "CH3", "10", "321" },
                                     { "H2SO4", "24", "541"},
                                     { "NaCl", "23", "544"} };
 
-            sortChemicals(chemicals);*/
+            sortChemicals(chemicals);
 
-            /*Console.WriteLine("Chemicals\tVolume\tConcentration");
+            Console.WriteLine("Chemicals\tVolume\tConcentration");
             for (int t = 0; t < chemicals.GetLength(0); t++)
             {
                 for (int j = 0; j < chemicals.GetLength(1); j++)
                     Console.Write("{0}\t\t", chemicals[t, j]);
                 Console.WriteLine();
-            }*/
+            }
 
+
+            /* Task 04*/
+
+            /*Console.Write("Input Length Of Array : ");
+            int len = Convert.ToInt32(Console.ReadLine());
+            int[] arr = new int[len];
+            for (int i = 0; i < arr.Length; i++) {
+                Console.Write("Input Index[{0}] : ", i);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            selection_Sort(arr);
+            Console.Write("After Sorting : ");
+            foreach (var item in arr) {
+                Console.Write("{0}, ", item);
+            }*/
 
             /* Task 05*/
 
-            /*Console.Write("Input No. Of Products : ");
+            Console.Write("Input No. Of Products : ");
             int len = Convert.ToInt32(Console.ReadLine());
-
             string[,] products = new string[len, 2];
 
-            input2dArray(products);
-            sortProducts(products);*/
+            for (int i = 0; i < products.GetLength(0); i++) {
+                Console.Write("Input Product Name : ");
+                products[i, 0] = Console.ReadLine();
+                Console.Write("Input Price : ");
+                products[i, 1] = Console.ReadLine();
+            }
+            sortProducts(products);
 
 
             Console.ReadLine();
@@ -72,25 +93,23 @@ namespace DSALab_2
                 str[smallest] = str[i];
                 str[i] = temp;
             }
-            foreach (var item in str) {
-                Console.WriteLine(item);
-            }
         }
 
         public static void inputArray(int[] arr) {
             for (int i = 0; i < arr.Length; i++)
             {
-                Console.Write("Input Value At Index[{0}] : ", i);
+                Console.Write("Input Index[{0}] : ", i);
                 arr[i] = Convert.ToInt32(Console.ReadLine());
             }
         }
-        public static void displayArray(int[] arr) {
+        public static void displayArray(string[] arr) {
             foreach (var item in arr) {
-                Console.WriteLine("{0}, ", item);
+                Console.Write("{0}, ", item);
             }
+            Console.WriteLine();
         }
 
-        public static void menu()
+        public static void sortingMenu()
         {
             int[] arr = { 2, 5, 6, 7, 1, 4 };
             Console.WriteLine("Hello World!");
@@ -167,16 +186,6 @@ namespace DSALab_2
                 }
             }
         }
-
-        public static void input2dArray(string[,] arr) {
-            for (int i = 0; i < arr.GetLength(0); i++)
-            {
-                Console.Write("Input Product Name : ");
-                arr[i, 0] = Console.ReadLine();
-                Console.Write("Input Price : ");
-                arr[i, 1] = Console.ReadLine();
-            }
-        }
         public static void sortChemicals(string[,] chemicals)
         {
             int smallest;
@@ -203,7 +212,6 @@ namespace DSALab_2
                 chemicals[i, 0] = temp2;
                 chemicals[i, 2] = temp3;
             }
-            
         }
         public static void sortProducts(string[,] products)
         {
@@ -266,7 +274,6 @@ namespace DSALab_2
                 
             } while (ans.Equals('y') || ans.Equals('Y'));
         }
-
 
     }
 }
