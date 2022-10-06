@@ -94,7 +94,6 @@ namespace DSALab_2
             }
             sortProducts(products);
 
-
             Console.ReadLine();
 
         }
@@ -210,6 +209,7 @@ namespace DSALab_2
         public static void sortProducts(string[,] products)
         {
             int smallest;
+            bool isExist = false;
             char ans = 'y';
             string temp, temp2;
             int n = products.GetLength(0);
@@ -241,31 +241,32 @@ namespace DSALab_2
 
             do
             {
-                Console.Write("\nEnter Product Name: ");
+                int i, j = 0;
+                Console.Write("\nSearch Your Product: ");
                 string product = Console.ReadLine();
-                for (int i = 0; i < products.GetLength(0); i++)
+                for (i = 0; i < products.GetLength(0); i++)
                 {
-                    for (int j = 0; j < products.GetLength(1); j++)
-                    {
-                        if (product.Equals(products[j,0]))
-                        {
-                            Console.WriteLine("\tProduct Found!!\n");
-                            Console.WriteLine("Product\tPrice");
-                            Console.Write("{0}\t\t", products[j, 0]);
-                            Console.Write("{0}\t\t", products[j, 1]);
-                            Console.WriteLine("\nDo You Want To Search Another Product [Y/n]");
-                            ans = Convert.ToChar(Console.ReadLine());
-                            break;
-                        }
-                        else {
-                            Console.WriteLine("\tProduct Not Found!!\n");
-                            Console.Write("Do You Want To Search Another Product [Y/n]");
-                            ans = Convert.ToChar(Console.ReadLine());
-                            break;
-                        }
+                    for (j = 0; j < products.GetLength(1); j++) {
+                        if (product.Equals(products[j, 0]))
+                            isExist = true;
+                        else
+                            isExist = false;
                     }
                 }
-                
+                if (isExist) {
+                    Console.WriteLine("\tProduct Found!!");
+                    Console.WriteLine("\nProduct\t\tPrice");
+                    Console.Write("{0}\t\t", products[j, 0]);
+                    Console.Write("{0}\t\t", products[j, 1]);
+                    Console.Write("\nDo You Want To Search Another Product [Y/n] : ");
+                    ans = Convert.ToChar(Console.ReadLine());
+                }
+                else {
+                    Console.WriteLine("\tProduct Not Found!!\n");
+                    Console.Write("Do You Want To Search Another Product [Y/n] : ");
+                    ans = Convert.ToChar(Console.ReadLine());
+                }
+
             } while (ans.Equals('y') || ans.Equals('Y'));
         }
 
