@@ -10,10 +10,30 @@ namespace DSALab_2
         {
 
             /* Task 01*/
-            //sortingMenu();
+            /*int[] arr = { 2, 5, 6, 7, 1, 4 };
+            Console.WriteLine("\tMenu");
+            Console.WriteLine("Which Sorting Algo You Would Like To Apply?\n" +
+                              "1. Bubble Sort\n" +
+                              "2. Selection Sort\n" +
+                              "3. Insertion Sort");
+            int ans = Convert.ToInt32(Console.ReadLine());
+            switch (ans)
+            {
+                case 1: Console.WriteLine("\tBubble Sort\n"); bubble_Sort(arr); break;
+                case 2: Console.WriteLine("\tSelection Sort\n"); selection_Sort(arr); break;
+                case 3: Console.WriteLine("\tInsertion Sort\n"); insertion_Sort(arr); break;
+
+                default:
+                    Console.WriteLine("Wrong Input...");
+                    break;
+            }
+            Console.Write("After Sorting : ");
+            foreach (var item in arr) {
+                Console.Write("{0}, " , item);
+            }*/
 
 
-            /* Task 02*/
+            /*Task 02*/
 
             /*string[] arr = { "Rizan", "Harry", "Steve", "Thor" };
             Console.Write("Before Sorting : ");
@@ -47,33 +67,90 @@ namespace DSALab_2
             /*Console.Write("Input Length Of Array : ");
             int len = Convert.ToInt32(Console.ReadLine());
             int[] arr = new int[len];
-            for (int i = 0; i < arr.Length; i++) {
+            for (int i = 0; i < arr.Length; i++)
+            {
                 Console.Write("Input Index[{0}] : ", i);
                 arr[i] = Convert.ToInt32(Console.ReadLine());
             }
             selection_Sort(arr);
             Console.Write("After Sorting : ");
-            foreach (var item in arr) {
+            foreach (var item in arr)
+            {
                 Console.Write("{0}, ", item);
             }*/
 
             /* Task 05*/
 
-            /*Console.Write("Input No. Of Products : ");
+            Console.Write("Input No. Of Products : ");
             int len = Convert.ToInt32(Console.ReadLine());
             string[,] products = new string[len, 2];
 
-            for (int i = 0; i < products.GetLength(0); i++) {
+            for (int i = 0; i < products.GetLength(0); i++)
+            {
                 Console.Write("Input Product Name : ");
                 products[i, 0] = Console.ReadLine();
                 Console.Write("Input Price : ");
                 products[i, 1] = Console.ReadLine();
             }
-            sortProducts(products);*/
+            sortProducts(products);
 
 
             Console.ReadLine();
 
+        }
+
+        public static void bubble_Sort(int[] array)
+        {
+            int n = array.Length;
+            int k;
+            for (int m = n; m >= 0; m--)
+            {
+                for (int i = 0; i < n - 1; i++)
+                {
+                    k = i + 1;
+                    if (array[i] > array[k])
+                    {
+                        int temp;
+                        temp = array[i];
+                        array[i] = array[k];
+                        array[k] = temp;
+                    }
+                }
+            }
+        }
+        public static void selection_Sort(int[] arr)
+        {
+            int temp, smallest;
+            int n = arr.Length;
+            for (int i = 0; i < n - 1; i++)
+            {
+                smallest = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                    if (arr[j] < arr[smallest])
+                    {
+                        smallest = j;
+                    }
+                }
+                temp = arr[smallest];
+                arr[smallest] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        public static void insertion_Sort(int[] inputArray)
+        {
+            for (int i = 0; i < inputArray.Length - 1; i++)
+            {
+                for (int j = i + 1; j > 0; j--)
+                {
+                    if (inputArray[j - 1] > inputArray[j])
+                    {
+                        int temp = inputArray[j - 1];
+                        inputArray[j - 1] = inputArray[j];
+                        inputArray[j] = temp;
+                    }
+                }
+            }
         }
 
         public static void selection_Sort(string[] str)
@@ -102,83 +179,7 @@ namespace DSALab_2
             Console.WriteLine();
         }
 
-        public static void sortingMenu()
-        {
-            int[] arr = { 2, 5, 6, 7, 1, 4 };
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("\tMenu");
-            Console.WriteLine("Which Sorting Algo You Would Like To Apply?\n" +
-                              "1. Bubble Sort\n" +
-                              "2. Selection Sort\n" +
-                              "3. Insertion Sort");
-            int ans = Convert.ToInt32(Console.ReadLine());
-            switch (ans)
-            {
-                case 1: bubble_Sort(arr); break;
-                case 2: selection_Sort(arr); break;
-                case 3: insertion_Sort(arr); break;
 
-                default:
-                    Console.WriteLine("Wrong Input...");
-                    break;
-            }
-        }
-
-        public static void bubble_Sort(int[] array)
-        {
-            int n = array.Length;
-            int k;
-            for (int m = n; m >= 0; m--)
-            {
-                for (int i = 0; i < n - 1; i++)
-                {
-                    k = i + 1;
-                    if (array[i] > array[k])
-                    {
-                        int temp;
-                        temp = array[i];
-                        array[i] = array[k];
-                        array[k] = temp;
-                    }
-                }
-            }
-        }
-
-        public static void selection_Sort(int[] arr)
-        {
-            int temp, smallest;
-            int n = arr.Length;
-            for (int i = 0; i < n - 1; i++)
-            {
-                smallest = i;
-                for (int j = i + 1; j < n; j++)
-                {
-                    if (arr[j] < arr[smallest])
-                    {
-                        smallest = j;
-                    }
-                }
-                temp = arr[smallest];
-                arr[smallest] = arr[i];
-                arr[i] = temp;
-            }
-        }
-
-        public static void insertion_Sort(int[] inputArray)
-        {
-            for (int i = 0; i < inputArray.Length - 1; i++)
-            {
-                for (int j = i + 1; j > 0; j--)
-                {
-                    if (inputArray[j - 1] > inputArray[j])
-                    {
-                        int temp = inputArray[j - 1];
-                        inputArray[j - 1] = inputArray[j];
-                        inputArray[j] = temp;
-                    }
-                }
-            }
-        }
         public static void sortChemicals(string[,] chemicals)
         {
             int smallest;
