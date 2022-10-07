@@ -64,7 +64,7 @@ namespace DSALab_2
 
             /* Task 04*/
 
-            /*Console.Write("Input Length Of Array : ");
+            /*Console.Write("Input No. Of Products : ");
             int len = Convert.ToInt32(Console.ReadLine());
             int[] arr = new int[len];
             for (int i = 0; i < arr.Length; i++)
@@ -87,9 +87,9 @@ namespace DSALab_2
 
             for (int i = 0; i < products.GetLength(0); i++)
             {
-                Console.Write("Input Product Name : ");
-                products[i, 0] = Console.ReadLine();
-                Console.Write("Input Price : ");
+                Console.Write("\nInput Product Name : ");
+                products[i, 0] = Console.ReadLine().Trim();
+                Console.Write("Input Price : $");
                 products[i, 1] = Console.ReadLine();
             }
             sortProducts(products);
@@ -210,8 +210,7 @@ namespace DSALab_2
         {
             int smallest;
             bool isExist = false;
-            char ans = 'y';
-            string temp, temp2;
+            string ans = "y", temp, temp2;
             int n = products.GetLength(0);
             for (int i = 0; i < n - 1; i++)
             {
@@ -221,13 +220,11 @@ namespace DSALab_2
                     if (int.Parse(products[j, 1]) < int.Parse(products[smallest, 1]))
                         smallest = j;
                 }
-
+                // swapping
                 temp = products[smallest, 1];
                 temp2 = products[smallest, 0];
-
                 products[smallest, 0] = products[i, 0];
                 products[smallest, 1] = products[i, 1];
-
                 products[i, 1] = temp;
                 products[i, 0] = temp2;
             }
@@ -241,33 +238,32 @@ namespace DSALab_2
 
             do
             {
-                int i, j = 0;
+                int i;
                 Console.Write("\nSearch Your Product: ");
-                string product = Console.ReadLine();
+                string product = Console.ReadLine().Trim();
                 for (i = 0; i < products.GetLength(0); i++)
                 {
-                    for (j = 0; j < products.GetLength(1); j++) {
-                        if (product.Equals(products[j, 0]))
-                            isExist = true;
-                        else
-                            isExist = false;
+                    if (product.Equals(products[i, 0])) {
+                        isExist = true; break;
                     }
+                    else
+                        isExist = false;
                 }
                 if (isExist) {
-                    Console.WriteLine("\tProduct Found!!");
+                    Console.WriteLine("\n\tProduct Found!!");
                     Console.WriteLine("\nProduct\t\tPrice");
-                    Console.Write("{0}\t\t", products[j, 0]);
-                    Console.Write("{0}\t\t", products[j, 1]);
-                    Console.Write("\nDo You Want To Search Another Product [Y/n] : ");
-                    ans = Convert.ToChar(Console.ReadLine());
+                    Console.Write("{0}\t\t", products[i, 0]);
+                    Console.Write("{0}\t\t", products[i, 1]);
+                    Console.Write("\nDo You Want To Search Other Products [Y/n] : ");
+                    ans = Console.ReadLine();
                 }
                 else {
-                    Console.WriteLine("\tProduct Not Found!!\n");
+                    Console.WriteLine("\n\tProduct Not Found!!\n");
                     Console.Write("Do You Want To Search Another Product [Y/n] : ");
-                    ans = Convert.ToChar(Console.ReadLine());
+                    ans = Console.ReadLine();
                 }
 
-            } while (ans.Equals('y') || ans.Equals('Y'));
+            } while (ans.Equals('y') || ans.Equals('Y') || ans.Equals("yes"));
         }
 
     }
