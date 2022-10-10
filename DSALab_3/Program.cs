@@ -28,8 +28,7 @@ namespace DSALab_3
         {
             LinkedListNode node = new LinkedListNode();
 
-            if (head == null)
-            {
+            if (head == null) {
                 Console.WriteLine("Head Can't Be Null");
             }
 
@@ -43,8 +42,7 @@ namespace DSALab_3
         }
         public void addNodeAfter(LinkedListNode prev, string data)
         {
-            if (prev == null)
-            {
+            if (prev == null) {
                 head = new LinkedListNode();
             }
 
@@ -56,8 +54,7 @@ namespace DSALab_3
         public void printData()
         {
             LinkedListNode node = head;
-            while (node != null)
-            {
+            while (node != null) {
                 Console.WriteLine(node.data);
                 node = node.next;
             }
@@ -66,8 +63,7 @@ namespace DSALab_3
         {
             LinkedListNode temp = head, prev = null;
 
-            if (temp != null && temp.data == key)
-            {
+            if (temp != null && temp.data == key) {
                 head = temp.next;
             }
 
@@ -86,12 +82,10 @@ namespace DSALab_3
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
             LinkedList list = new LinkedList();
             Console.Write("Input No. Of Elements : ");
             int num = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < num; i++)
-            {
+            for (int i = 0; i < num; i++) {
                 list.addNodeToFront();
             }
             Console.WriteLine("\nPrint Data");
