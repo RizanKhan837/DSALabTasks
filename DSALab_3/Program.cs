@@ -82,10 +82,11 @@ namespace DSALab_3
     {
         static void Main(string[] args)
         {
-            /*LinkedList list = new LinkedList();
+            LinkedList list = new LinkedList();
             Console.Write("Input No. Of Elements : ");
             int num = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < num; i++) {
+            for (int i = 0; i < num; i++)
+            {
                 list.addNodeToFront();
             }
             Console.WriteLine("\nPrint Data");
@@ -94,7 +95,7 @@ namespace DSALab_3
             string item = Console.ReadLine();
             list.deleteNode(item);
             Console.WriteLine("\nAfter Deletion");
-            list.printData();*/
+            list.printData();
             Console.ReadLine();
         }
     }
