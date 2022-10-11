@@ -70,7 +70,7 @@ namespace DSALab_3
                     {
                         case 1: addNodeToFront(); break;
                         case 2: addNodeAtEnd(); break;
-                        case 3: addNodeAfter(); break;
+                        case 3: //addNodeAfter(); break;
                         default:
                             break;
                     }
@@ -79,7 +79,13 @@ namespace DSALab_3
                     break;
             }
         }
-        public void input() { 
+        public void input() {
+            /*LinkedList list = new LinkedList();
+            Console.Write("Input No. Of Elements : ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < num; i++) {
+                list.addNodeToFront();
+            }*/
         }
         public void printData()
         {
@@ -112,12 +118,7 @@ namespace DSALab_3
     {
         static void Main(string[] args)
         {
-            LinkedList list = new LinkedList();
-            Console.Write("Input No. Of Elements : ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < num; i++) {
-                list.addNodeToFront();
-            }
+            
             Console.WriteLine("\nPrint Data");
             list.printData();
             Console.Write("\nInput Item To Be Deleted : ");
