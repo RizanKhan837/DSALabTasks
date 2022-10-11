@@ -17,41 +17,46 @@ namespace DSALab_3
     {
         public LinkedListNode head;
 
-        public void addNodeToFront()
-        {
-            LinkedListNode node = new LinkedListNode();
-            node.next = head;
-            head = node;
-        }
-        public void addNodeAtEnd()
-        {
-            LinkedListNode node = new LinkedListNode();
-
-            if (head == null) {
-                Console.WriteLine("Head Can't Be Null");
-            }
-
-            node.next = null;
-            LinkedListNode temp = head;
-            while (temp.next != null)
-            {
-                temp = temp.next;
-                temp.next = node;
+        public void addNodeToFront(int num) {
+            for (int i = 0; i < num; i++) {
+                LinkedListNode node = new LinkedListNode();
+                node.next = head;
+                head = node;
             }
         }
-        public void addNodeAfter(LinkedListNode prev, string data)
+        public void addNodeAtEnd(int num)
         {
-            if (prev == null) {
-                head = new LinkedListNode();
+            for (int i = 0; i < num; i++) {
+
+                LinkedListNode node = new LinkedListNode();
+                if (head == null)
+                {
+                    Console.WriteLine("Head Can't Be Null");
+                }
+
+                node.next = null;
+                LinkedListNode temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                    temp.next = node;
+                }
             }
-
-            LinkedListNode node = new LinkedListNode();
-
-            node.next = prev.next;
-            prev.next = node;
+        }
+        public void addNodeAfter(LinkedListNode prev, int num)
+        {
+            for (int i = 0; i < num; i++) {
+                if (prev == null) {
+                    head = new LinkedListNode();
+                }
+                LinkedListNode node = new LinkedListNode();
+                node.next = prev.next;
+                prev.next = node;
+            }
         }
 
-        public void menu() {
+        public void menu(LinkedList list) {
+            int inp;
             Console.Write("Choose One Option...\n" +
                               "1. Insertion\n" +
                               "2. Deletion\n" +
@@ -68,27 +73,31 @@ namespace DSALab_3
                     int ans = Convert.ToInt32(Console.ReadLine());
                     switch (ans)
                     {
-                        case 1: addNodeToFront(); break;
-                        case 2: addNodeAtEnd(); break;
-                        case 3: //addNodeAfter(); break;
-                        default:
-                            break;
+                        case 1: inp = input(); addNodeToFront(inp); break;
+                        case 2: inp = input(); addNodeAtEnd(inp); break;
+                        case 3: inp = input(); addNodeAfter(list.head.next, inp); break;
+                        default: Console.WriteLine("Invalid Input..."); break;
                     }
                     break;
+                case 2:
+                    Console.Write("\nInput Item To Be Deleted : ");
+                    string item = Console.ReadLine();
+                    list.deleteNode(item); break;
+                case 3: 
+                    list.printData(); break;
                 default:
-                    break;
+                    Console.WriteLine("Invalid Input..."); break;
             }
         }
-        public void input() {
-            /*LinkedList list = new LinkedList();
+        public int input() {
+            LinkedList list = new LinkedList();
             Console.Write("Input No. Of Elements : ");
             int num = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < num; i++) {
-                list.addNodeToFront();
-            }*/
+            return num;
         }
         public void printData()
         {
+            Console.WriteLine("\nPrint Data");
             LinkedListNode node = head;
             while (node != null) {
                 Console.WriteLine(node.data);
@@ -118,14 +127,8 @@ namespace DSALab_3
     {
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("\nPrint Data");
-            list.printData();
-            Console.Write("\nInput Item To Be Deleted : ");
-            string item = Console.ReadLine();
-            list.deleteNode(item);
-            Console.WriteLine("\nAfter Deletion");
-            list.printData();
+            LinkedList list = new LinkedList();
+            list.menu(list);
             Console.ReadLine();
         }
     }
