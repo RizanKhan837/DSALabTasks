@@ -7,8 +7,7 @@ namespace DSALab_3
         public string data;
         public LinkedListNode next;
 
-        public LinkedListNode()
-        {
+        public LinkedListNode() {
             Console.Write("Enter Data: ");
             data = Console.ReadLine();
             next = null;
@@ -51,6 +50,37 @@ namespace DSALab_3
             node.next = prev.next;
             prev.next = node;
         }
+
+        public void menu() {
+            Console.Write("Choose One Option...\n" +
+                              "1. Insertion\n" +
+                              "2. Deletion\n" +
+                              "3. Display Data\n" +
+                              "Enter Option : ");
+            int opt = Convert.ToInt32(Console.ReadLine());
+            switch (opt)
+            {
+                case 1:
+                    Console.WriteLine("Choose One Option...\n" +
+                                      "1. Push\n" +
+                                      "2. Append\n" +
+                                      "3. Insert After Given Address");
+                    int ans = Convert.ToInt32(Console.ReadLine());
+                    switch (ans)
+                    {
+                        case 1: addNodeToFront(); break;
+                        case 2: addNodeAtEnd(); break;
+                        case 3: addNodeAfter(); break;
+                        default:
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        public void input() { 
+        }
         public void printData()
         {
             LinkedListNode node = head;
@@ -85,8 +115,7 @@ namespace DSALab_3
             LinkedList list = new LinkedList();
             Console.Write("Input No. Of Elements : ");
             int num = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < num; i++)
-            {
+            for (int i = 0; i < num; i++) {
                 list.addNodeToFront();
             }
             Console.WriteLine("\nPrint Data");
