@@ -31,9 +31,7 @@ namespace DSALab_3
 
                 LinkedListNode node = new LinkedListNode();
                 if (head == null)
-                {
                     Console.WriteLine("Head Can't Be Null");
-                }
 
                 node.next = null;
                 LinkedListNode temp = head;
