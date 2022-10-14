@@ -120,8 +120,7 @@ namespace DSALab_3
                 head = temp.next;
             }
 
-            while (temp != null && temp.data != key)
-            {
+            while (temp != null && temp.data != key) {
                 prev = temp;
                 temp = temp.next;
             }
