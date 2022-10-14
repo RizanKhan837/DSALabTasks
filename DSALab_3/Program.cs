@@ -16,6 +16,7 @@ namespace DSALab_3
     class LinkedList
     {
         public LinkedListNode head;
+        int count = 1;
 
         public void addNodeToFront(int num) {
             for (int i = 0; i < num; i++) {
@@ -57,7 +58,7 @@ namespace DSALab_3
 
         public void menu(LinkedList list) {
             int inp;
-            Console.Write("Choose One Option...\n" +
+            Console.Write("\tChoose One Option...\n" +
                               "1. Insertion\n" +
                               "2. Deletion\n" +
                               "3. Display Data\n" +
@@ -66,10 +67,11 @@ namespace DSALab_3
             switch (opt)
             {
                 case 1:
-                    Console.WriteLine("Choose One Option...\n" +
+                    Console.Write("\n\tChoose One Option...\n" +
                                       "1. Push\n" +
                                       "2. Append\n" +
-                                      "3. Insert After Given Address");
+                                      "3. Insert After Given Address\n" +
+                                      "Enter Option : ");
                     int ans = Convert.ToInt32(Console.ReadLine());
                     switch (ans)
                     {
@@ -88,20 +90,26 @@ namespace DSALab_3
                 default:
                     Console.WriteLine("Invalid Input..."); break;
             }
+            menu(list);
         }
         public int input() {
             LinkedList list = new LinkedList();
-            Console.Write("Input No. Of Elements : ");
+            Console.Write("Total No. Of Elements : ");
             int num = Convert.ToInt32(Console.ReadLine());
             return num;
         }
-        public void printData()
-        {
-            Console.WriteLine("\nPrint Data");
+        public void printData() {
             LinkedListNode node = head;
-            while (node != null) {
-                Console.WriteLine(node.data);
-                node = node.next;
+            if (node == null)
+                Console.WriteLine("\n\tList Is Empty :(");
+            else {
+                Console.WriteLine("\n\tData");
+                while (node != null) {
+                    Console.WriteLine("{0}. {1}", count, node.data);
+                    node = node.next;
+                    count++;
+                }
+                Console.WriteLine("\n/*------------------*/");
             }
         }
         public void deleteNode(string key)
