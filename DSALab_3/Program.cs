@@ -34,8 +34,7 @@ namespace DSALab_3
 
                 node.next = null;
                 LinkedListNode temp = head;
-                while (temp.next != null)
-                {
+                while (temp.next != null) {
                     temp = temp.next;
                     temp.next = node;
                 }
