@@ -84,7 +84,7 @@ namespace DSALab_3
                 case 3: 
                     list.printData(); break;
                 default:
-                    Console.WriteLine("Invalid Input..."); break;
+                    Console.WriteLine("Invalid Input...!!"); break;
             }
             menu(list);
         }
