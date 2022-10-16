@@ -17,7 +17,6 @@ namespace DSALab_3
     {
         public LinkedListNode head;
         int count = 1;
-
         public void addNodeToFront(int num) {
             for (int i = 0; i < num; i++) {
                 LinkedListNode node = new LinkedListNode();
@@ -68,7 +67,7 @@ namespace DSALab_3
                     Console.Write("\n\tChoose One Option...\n" +
                                       "1. Push\n" +
                                       "2. Append\n" +
-                                      "3. Insert After Given Address\n" +
+                                      "3. Insert In Middle\n" +
                                       "Enter Option : ");
                     int ans = Convert.ToInt32(Console.ReadLine());
                     switch (ans)
