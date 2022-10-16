@@ -53,7 +53,7 @@ namespace DSALab_3
         }
 
         public void menu(LinkedList list) {
-            int inp;
+            int inp; char rep = 'n';
             Console.Write("\tChoose One Option...\n" +
                               "1. Insertion\n" +
                               "2. Deletion\n" +
@@ -71,28 +71,34 @@ namespace DSALab_3
                     int ans = Convert.ToInt32(Console.ReadLine());
                     switch (ans)
                     {
-                        case 1: inp = input(); addNodeToFront(inp); break;
-                        case 2: inp = input(); addNodeAtEnd(inp); break;
-                        case 3: inp = input(); addNodeAfter(list.head.next, inp); break;
-                        default: Console.WriteLine("Invalid Input..."); break;
+                        case 1: inp = input(); addNodeToFront(inp); rep = replay();  break;
+                        case 2: inp = input(); addNodeAtEnd(inp); rep = replay(); break;
+                        case 3: inp = input(); addNodeAfter(list.head.next, inp); rep = replay(); break;
+                        default: Console.WriteLine("Invalid Input..."); rep = replay(); break;
                     }
                     break;
                 case 2:
                     Console.Write("\nInput Item To Be Deleted : ");
                     string item = Console.ReadLine();
-                    list.deleteNode(item); break;
+                    list.deleteNode(item); rep = replay(); break;
                 case 3: 
-                    list.printData(); break;
+                    list.printData(); rep = replay(); break;
                 default:
-                    Console.WriteLine("Invalid Input...!!"); break;
+                    Console.WriteLine("Invalid Input...!!"); rep = replay(); break;
             }
-            menu(list);
+            if (rep == 'Y')
+                menu(list);
         }
         public int input() {
             LinkedList list = new LinkedList();
             Console.Write("Total No. Of Elements : ");
             int num = Convert.ToInt32(Console.ReadLine());
             return num;
+        }
+        public char replay() {
+            Console.Write("Do You Want To Restart [Y/n] : ");
+            char ans = Convert.ToChar(Console.ReadLine());
+            return ans;
         }
         public void printData() {
             LinkedListNode node = head;
