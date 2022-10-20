@@ -64,7 +64,6 @@ namespace DSALab_4
 
             if (temp != null && temp.data == key)
                 head = temp.next;
-            }
 
             while (temp != null && temp.data != key)
             {
@@ -81,7 +80,8 @@ namespace DSALab_4
     {
         static void Main(string[] args)
         {
-            /*Console.WriteLine("Hello World!");*/
+        /*Console.WriteLine("Hello World!");*/
+        Console.ReadLine();
         }
     }
 }
