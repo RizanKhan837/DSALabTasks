@@ -29,9 +29,7 @@ namespace DSALab_4
             LinkedListNode node = new LinkedListNode();
 
             if (head == null)
-            {
                 Console.WriteLine("Head Can't Be Null");
-            }
 
             node.next = null;
             LinkedListNode temp = head;
@@ -44,9 +42,7 @@ namespace DSALab_4
         public void addNodeAfter(LinkedListNode prev, string data)
         {
             if (prev == null)
-            {
                 head = new LinkedListNode();
-            }
 
             LinkedListNode node = new LinkedListNode();
 
@@ -56,8 +52,7 @@ namespace DSALab_4
         public void printData()
         {
             LinkedListNode node = head;
-            while (node != null)
-            {
+            while (node != null) {
                 Console.WriteLine(node.data);
                 node = node.next;
             }
@@ -67,12 +62,9 @@ namespace DSALab_4
             LinkedListNode temp = head, prev = null;
 
             if (temp != null && temp.data == key)
-            {
                 head = temp.next;
-            }
 
-            while (temp != null && temp.data != key)
-            {
+            while (temp != null && temp.data != key) {
                 prev = temp;
                 temp = temp.next;
             }
@@ -87,7 +79,7 @@ namespace DSALab_4
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello World!");
-            LinkedList list = new LinkedList();
+           /* LinkedList list = new LinkedList();
             Console.Write("Input No. Of Elements : ");
             int num = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < num; i++)
@@ -101,7 +93,7 @@ namespace DSALab_4
             list.deleteNode(item);
             Console.WriteLine("\nAfter Deletion");
             list.printData();
-            Console.ReadLine();
+            Console.ReadLine();*/
         }
     }
 }
