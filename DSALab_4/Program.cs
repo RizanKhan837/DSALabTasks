@@ -26,12 +26,10 @@ namespace DSALab_4
         }
         public void addNodeAtEnd()
         {
-            LinkedListNode node = new LinkedListNode();
+            //LinkedListNode node = new LinkedListNode();
 
             if (head == null)
-            {
                 Console.WriteLine("Head Can't Be Null");
-            }
 
             node.next = null;
             LinkedListNode temp = head;
