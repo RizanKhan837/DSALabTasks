@@ -63,7 +63,6 @@ namespace DSALab_4
             LinkedListNode temp = head, prev = null;
 
             if (temp != null && temp.data == key)
-            {
                 head = temp.next;
             }
 
