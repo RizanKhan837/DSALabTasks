@@ -42,9 +42,7 @@ namespace DSALab_4
         public void addNodeAfter(LinkedListNode prev, string data)
         {
             if (prev == null)
-            {
                 head = new LinkedListNode();
-            }
 
             LinkedListNode node = new LinkedListNode();
 
