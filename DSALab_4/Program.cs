@@ -20,9 +20,9 @@ namespace DSALab_4
 
         public void addNodeToFront()
         {
-            LinkedListNode node = new LinkedListNode();
+           /* LinkedListNode node = new LinkedListNode();
             node.next = head;
-            head = node;
+            head = node;*/
         }
         public void addNodeAtEnd()
         {
