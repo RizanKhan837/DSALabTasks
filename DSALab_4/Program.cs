@@ -23,8 +23,7 @@ namespace DSALab_4
         }
         public void InsertAfter(Node prev_Node, int new_data)
         {
-            if (prev_Node == null)
-            {
+            if (prev_Node == null) {
                 Console.WriteLine("The given previous node cannot be NULL ");
                 return;
             }
@@ -117,7 +116,7 @@ namespace DSALab_4
             int v3 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the value 4: ");
             int v4 = Convert.ToInt32(Console.ReadLine());
-            list.head = new Node(v1);
+            /*list.head = new Node(v1);
             Node second = new Node(v2);
             Node third = new Node(v3);
             Node f4 = new Node(v4);
@@ -126,7 +125,7 @@ namespace DSALab_4
             second.prev = list.head;
             third.prev = second;
             third.next = f4;
-            f4.prev = third;
+            f4.prev = third;*/
             Console.WriteLine("-------Traversing-----------");
             list.printlist(list.head);
             Console.WriteLine();
