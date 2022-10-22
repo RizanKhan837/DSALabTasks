@@ -130,7 +130,6 @@ namespace DSALab_4
             Console.WriteLine("-------Traversing-----------");
             list.printlist(list.head);
             Console.WriteLine();
-            Console.WriteLine();
             Console.WriteLine("\n1) Insertion  \n2)Deletion");
             int select = int.Parse(Console.ReadLine());
             switch (select)
@@ -220,7 +219,6 @@ namespace DSALab_4
                     }
             }
             Console.WriteLine();
-            Console.ReadLine();
         }
         public void printlist(Node node)
         {
