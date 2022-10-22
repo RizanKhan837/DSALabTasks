@@ -39,8 +39,7 @@ namespace DSALab_4
             Node new_node = new Node(new_data);
             Node last = head;
             new_node.next = null;
-            if (head == null)
-            {
+            if (head == null) {
                 new_node.prev = null;
                 head = new_node;
                 return;
@@ -108,7 +107,7 @@ namespace DSALab_4
         }
         public void menu(DLL list)
         {
-            Console.WriteLine("Enter the value 1: ");
+            /*Console.WriteLine("Enter the value 1: ");
             int v1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the value 2: ");
             int v2 = Convert.ToInt32(Console.ReadLine());
@@ -125,7 +124,7 @@ namespace DSALab_4
             second.prev = list.head;
             third.prev = second;
             third.next = f4;
-            f4.prev = third;
+            f4.prev = third;*/
 
             Console.WriteLine("-------Traversing-----------");
             list.printlist(list.head);
