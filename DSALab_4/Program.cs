@@ -246,8 +246,6 @@ namespace DSALab_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             DLL dll = new DLL();
             dll.menu(dll);
             Console.ReadLine();
