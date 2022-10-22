@@ -107,6 +107,7 @@ namespace DSALab_4
         }
         public void menu(DLL list)
         {
+
             Console.WriteLine("Enter the value 1: ");
             int v1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the value 2: ");
@@ -223,8 +224,7 @@ namespace DSALab_4
         {
             Node last = null;
             Console.WriteLine("Traversal in forward Direction");
-            while (node != null)
-            {
+            while (node != null) {
                 Console.Write(node.data + " ");
                 last = node;
                 node = node.next;
