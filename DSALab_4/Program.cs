@@ -9,7 +9,7 @@ namespace DSALab_4
         public Node next;
         public Node(int d) { data = d; }
     }
-    public class DLL
+    public class DoublyLinkedList
     {
         public Node head;
         public void push(int new_data)
@@ -21,7 +21,7 @@ namespace DSALab_4
                 head.prev = new_Node;
             head = new_Node;
         }
-        public void InsertAfter(Node prev_Node, int new_data)
+        public void insertAfter(Node prev_Node, int new_data)
         {
             if (prev_Node == null) {
                 Console.WriteLine("The given previous node cannot be NULL ");
@@ -49,7 +49,7 @@ namespace DSALab_4
             last.next = new_node;
             new_node.prev = last;
         }
-        public void Insertbefore(Node next_Node, int new_data)
+        public void insertBefore(Node next_Node, int new_data)
         {
             if (next_Node == null)
             {
@@ -64,164 +64,74 @@ namespace DSALab_4
                 new_node.prev.next = new_node;
             else { head = new_node; }
         }
-        public void DelFromStart()
+        
+        public void menu(DoublyLinkedList list)
         {
-            if (head.next.next == null)
-            { head.next = null; }
-            else
-            {
-                Console.WriteLine("THE DATA {0} IS DELETED FROM LINKEDLIST", head.next.data);
-                head.next = head.next.next;
-                head.next.prev = null;
-            }
-        }
-        public void DelFromEnd()
-        {
-            if (head.next.next == null)
-            {
-                Console.WriteLine("THE DATA {0} IS DELETED FROM LINKEDLIST", head.next.data);
-                head.next = null;
-            }
-            else
-            {
-                Node temp = head.next;
-                while (temp.next.next != null)
-                { temp = temp.next; }
-                Console.WriteLine("THE DATA {0} IS DELETED FROM LINKEDLIST", temp.next.data);
-                temp.next = null;
-            }
-        }
-        public void DelAfter(int data)
-        {
-            Node temp = head.next;
-            while (temp.data != data)
-            {
-                if (temp.next == null) { return; }
-                else if (temp.next.next == null)
-                { temp.next = null; }
-                else { temp = temp.next; }
-            }
-            Console.WriteLine("THE DATA {0} IS DELETED FROM LINKEDLIST", temp.next.data);
-            temp.next = temp.next.next;
-            temp.next.next.prev = temp;
-        }
-        public void menu(DLL list)
-        {
-
-            Console.WriteLine("Enter the value 1: ");
-            int v1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value 2: ");
-            int v2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value 3: ");
-            int v3 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value 4: ");
-            int v4 = Convert.ToInt32(Console.ReadLine());
-            list.head = new Node(v1);
-            Node second = new Node(v2);
-            Node third = new Node(v3);
-            Node f4 = new Node(v4);
-            list.head.next = second;
-            second.next = third;
-            second.prev = list.head;
-            third.prev = second;
-            third.next = f4;
-            f4.prev = third;
-
-            Console.WriteLine("-------Traversing-----------");
-            list.printlist(list.head);
-            Console.WriteLine();
-            Console.WriteLine("\n1) Insertion  \n2)Deletion");
-            int select = int.Parse(Console.ReadLine());
-            switch (select)
+            int inp;
+            Console.Write("\tChoose One Option...\n" +
+                              "1. Insertion\n" +
+                              "2. Deletion\n" +
+                              "3. Display Data\n" +
+                              "Enter Option : ");
+            int opt = Convert.ToInt32(Console.ReadLine());
+            switch (opt)
             {
                 case 1:
-                    Console.WriteLine(" \n1) At the front of the DLL \n2) After a given node. \n3) At the end of the DLL \n4) Before a given node");
-                    int opt = int.Parse(Console.ReadLine());
-                    switch (opt)
+                    Console.Write("\n\tChoose One Option...\n" +
+                                      "1. Push\n" +
+                                      "2. Append\n" +
+                                      "3. Insert After\n" +
+                                      "4. Insert Before\n" +
+                                      "Enter Option : ");
+                    int ans = Convert.ToInt32(Console.ReadLine());
+                    switch (ans)
                     {
-                        case 1:
-                            {
-                                Console.WriteLine("Enter your data: ");
-                                int data = int.Parse(Console.ReadLine());
-                                list.push(data);
-                                Console.WriteLine("-------Traversing-----------");
-                                list.printlist(list.head);
-                                break;
-                            }
-                        case 2:
-                            {
-                                Console.WriteLine("Enter your data: ");
-                                int data = int.Parse(Console.ReadLine());
-                                Console.WriteLine("Enter the value you want to add");
-                                int a = int.Parse(Console.ReadLine());
-                                list.InsertAfter(second, a);
-                                Console.WriteLine("-------Traversing-----------");
-                                list.printlist(list.head);
-                                break;
-                            }
-                        case 3:
-                            {
-                                Console.WriteLine("Enter the value you want to add");
-                                int a = int.Parse(Console.ReadLine());
-                                list.append(a);
-                                Console.WriteLine("-------Traversing-----------");
-                                list.printlist(list.head);
-                                break;
-                            }
-                        case 4:
-                            {
-                                Console.WriteLine("Enter the value you want to add");
-                                int a = int.Parse(Console.ReadLine());
-                                list.Insertbefore(second, a);
-                                Console.WriteLine("-------Traversing-----------");
-                                list.printlist(list.head);
-                                break;
-                            }
-                        default:
-                            {
-                                Console.WriteLine("Invalid option");
-                                break;
-                            }
+                        case 1: inp = input(); push(inp); break;
+                        case 2: inp = input(); append(inp); break;
+                        case 3: inp = input(); insertAfter(list.head.prev, inp); break;
+                        case 4: inp = input(); insertBefore(list.head.next, inp); break;
+                        default: Console.WriteLine("Invalid Input..."); break;
                     }
                     break;
                 case 2:
-                    Console.WriteLine(" \n1)DelFromStart \n2) DelFromEnd \n3)  DelAfter ");
-                    int opt1 = int.Parse(Console.ReadLine());
-                    switch (opt1)
-                    {
-                        case 1:
-                            {
-                                list.DelFromStart();
-                                Console.WriteLine("-------Traversing-----------");
-                                list.printlist(list.head);
-                                break;
-                            }
-                        case 2:
-                            {
-                                list.DelFromEnd();
-                                Console.WriteLine("-------Traversing-----------");
-                                list.printlist(list.head);
-                                break;
-                            }
-                        case 3:
-                            {
-                                list.DelAfter(v4);
-                                Console.WriteLine("-------Traversing-----------");
-                                list.printlist(list.head);
-                                break;
-                            }
-                    }
-                    break;
+                    Console.Write("\nInput Item To Be Deleted : ");
+                    int item = Convert.ToInt32(Console.ReadLine());
+                    list.deleteNode(item); break;
+                case 3:
+                    list.printData(list.head); break;
                 default:
-                    {
-                        Console.WriteLine("Invalid option");
-                        break;
-                    }
+                    Console.WriteLine("Invalid Input..."); break;
             }
-            Console.WriteLine();
+            menu(list);
         }
-        public void printlist(Node node)
+
+        public void deleteNode(int key)
         {
+            Node temp = head, prev = null;
+
+            if (temp != null && temp.data == key) {
+                head = temp.next;
+            }
+
+            while (temp != null && temp.data != key) {
+                prev = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+
+            prev.next = temp.next;
+        }
+
+        public int input()
+        {
+            DoublyLinkedList list = new DoublyLinkedList();
+            Console.Write("Total No. Of Elements : ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            return num;
+        }
+        public void printData(Node node) {
+
             Node last = null;
             Console.WriteLine("Traversal in forward Direction");
             while (node != null) {
@@ -231,8 +141,7 @@ namespace DSALab_4
             }
             Console.WriteLine();
             Console.WriteLine("Traversal in reverse direction");
-            while (last != null)
-            {
+            while (last != null) {
                 Console.Write(last.data + " ");
                 last = last.prev;
             }
@@ -243,7 +152,7 @@ namespace DSALab_4
     {
         static void Main(string[] args)
         {
-            DLL dll = new DLL();
+            DoublyLinkedList dll = new DoublyLinkedList();
             dll.menu(dll);
             Console.ReadLine();
         }
