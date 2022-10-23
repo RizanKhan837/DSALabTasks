@@ -7,8 +7,9 @@ namespace DSALab_4
         public int data;
         public Node prev, next;
         public Node() {
-            Console.Write("Enter Data: ");
-            data = Convert.ToInt32(Console.ReadLine());
+
+           /* Console.Write("Enter Data: ");
+            data = Convert.ToInt32(Console.ReadLine());*/
             next = null;
         }
     }
@@ -132,7 +133,6 @@ namespace DSALab_4
             }
             if (temp == null)
                 return;
-
             prev.next = temp.next;
             temp.next.prev = prev;
         }
