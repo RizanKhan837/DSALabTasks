@@ -7,62 +7,77 @@ namespace DSALab_4
         public int data;
         public Node prev;
         public Node next;
-        public Node(int d) { data = d; }
+        public Node() {
+            Console.Write("Enter Data: ");
+            data = Convert.ToInt32(Console.ReadLine());
+            next = null;
+        }
     }
     public class DoublyLinkedList
     {
         public Node head;
-        public void push(int new_data)
+        public void push(int inp)
         {
-            Node new_Node = new Node(new_data);
-            new_Node.next = head;
-            new_Node.prev = null;
-            if (head != null)
-                head.prev = new_Node;
-            head = new_Node;
-        }
-        public void insertAfter(Node prev_Node, int new_data)
-        {
-            if (prev_Node == null) {
-                Console.WriteLine("The given previous node cannot be NULL ");
-                return;
+            for (int i = 0; i < inp; i++) {
+                Node new_Node = new Node();
+                new_Node.next = head;
+                new_Node.prev = null;
+                if (head != null)
+                    head.prev = new_Node;
+                head = new_Node;
             }
-            Node new_node = new Node(new_data);
-            new_node.next = prev_Node.next;
-            prev_Node.next = new_node;
-            new_node.prev = prev_Node;
-            if (new_node.next != null)
-                new_node.next.prev = new_node;
         }
-        public void append(int new_data)
+        public void insertAfter(Node prev_Node, int inp)
         {
-            Node new_node = new Node(new_data);
-            Node last = head;
-            new_node.next = null;
-            if (head == null) {
-                new_node.prev = null;
-                head = new_node;
-                return;
-            }
-            while (last.next != null)
-                last = last.next;
-            last.next = new_node;
-            new_node.prev = last;
-        }
-        public void insertBefore(Node next_Node, int new_data)
-        {
-            if (next_Node == null)
+            for (int i = 0; i < inp; i++)
             {
-                Console.WriteLine("The given previous node cannot be NULL ");
-                return;
+                if (prev_Node == null) {
+                    Console.WriteLine("The given previous node cannot be NULL ");
+                    return;
+                }
+                Node new_node = new Node();
+                new_node.next = prev_Node.next;
+                prev_Node.next = new_node;
+                new_node.prev = prev_Node;
+                if (new_node.next != null)
+                    new_node.next.prev = new_node;
             }
-            Node new_node = new Node(new_data);
-            new_node.prev = next_Node.prev;
-            next_Node.prev = new_node;
-            new_node.next = next_Node;
-            if (new_node.prev != null)
-                new_node.prev.next = new_node;
-            else { head = new_node; }
+        }
+        public void append(int inp)
+        {
+            for (int i = 0; i < inp; i++)
+            {
+                Node new_node = new Node();
+                Node last = head;
+                new_node.next = null;
+                if (head == null)
+                {
+                    new_node.prev = null;
+                    head = new_node;
+                    return;
+                }
+                while (last.next != null)
+                    last = last.next;
+                last.next = new_node;
+                new_node.prev = last;
+            }
+        }
+        public void insertBefore(Node next_Node, int inp)
+        {
+            for (int i = 0; i < inp; i++)
+            {
+                if (next_Node == null) {
+                    Console.WriteLine("The given previous node cannot be NULL ");
+                    return;
+                }
+                Node new_node = new Node();
+                new_node.prev = next_Node.prev;
+                next_Node.prev = new_node;
+                new_node.next = next_Node;
+                if (new_node.prev != null)
+                    new_node.prev.next = new_node;
+                else { head = new_node; }
+            }
         }
         
         public void menu(DoublyLinkedList list)
@@ -121,17 +136,16 @@ namespace DSALab_4
                 return;
 
             prev.next = temp.next;
+            temp.next.prev = prev;
         }
 
         public int input()
         {
-            DoublyLinkedList list = new DoublyLinkedList();
             Console.Write("Total No. Of Elements : ");
             int num = Convert.ToInt32(Console.ReadLine());
             return num;
         }
         public void printData(Node node) {
-
             Node last = null;
             Console.WriteLine("Traversal in forward Direction");
             while (node != null) {
@@ -145,6 +159,7 @@ namespace DSALab_4
                 Console.Write(last.data + " ");
                 last = last.prev;
             }
+            Console.WriteLine();
         }
     }
 
