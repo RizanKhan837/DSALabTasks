@@ -5,8 +5,7 @@ namespace DSALab_4
     public class Node
     {
         public int data;
-        public Node prev;
-        public Node next;
+        public Node prev, next;
         public Node() {
             Console.Write("Enter Data: ");
             data = Convert.ToInt32(Console.ReadLine());
@@ -79,7 +78,6 @@ namespace DSALab_4
                 else { head = new_node; }
             }
         }
-        
         public void menu(DoublyLinkedList list)
         {
             int inp;
