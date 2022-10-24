@@ -8,8 +8,8 @@ namespace DSALab_4
         public Node prev, next;
         public Node() {
 
-           /* Console.Write("Enter Data: ");
-            data = Convert.ToInt32(Console.ReadLine());*/
+            Console.Write("Enter Data: ");
+            data = Convert.ToInt32(Console.ReadLine());
             next = null;
         }
     }
