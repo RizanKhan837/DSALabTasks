@@ -15,27 +15,6 @@ namespace DSALab_5
                 next = null;
             }
         }
-        public class Llist
-        {
-            public static Node head;
-            public static void printList()
-            {
-                Node n = head;
-                while (n != null)
-                {
-                    Console.Write(n.data + " ");
-                    n = n.next;
-                }
-            }
-            public void push()
-            {
-                Node new_node = new Node();
-                new_node.next = head;
-                head = new_node;
-            }
-
-
-        }
         internal class Stack
         {
             static int counter;
@@ -93,27 +72,29 @@ namespace DSALab_5
             }
             internal void printList()
             {
-                Node n = head;
-                while (n != null)
+                Node node = head;
+                while (node != null)
                 {
-                    Console.WriteLine(n.data + " ");
-                    n = n.next;
+                    Console.WriteLine(node.data + " ");
+                    node = node.next;
                 }
             }
 
             internal void printStack()
             {
-                if (top < 0)
+                if (counter <= 0)
                 {
                     Console.WriteLine("Stack Underflow");
                     return;
                 }
                 else
                 {
+                    Node node = head;
                     Console.Write("Items In The Stack Are : ");
-                    for (int i = top; i >= 0; i--)
+                    for (int i = counter; i >= 0; i--)
                     {
-                        Console.Write("{0}, ", counter);
+                        Console.WriteLine(node.data + " ");
+                        node = node.next;
                     }
                     Console.WriteLine();
                 }
