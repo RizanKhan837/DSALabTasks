@@ -38,15 +38,9 @@ namespace DSALab_5
         }
         internal class Stack
         {
-            static readonly int Max = 50;
+            static int counter;
             int top;
-            string[] stack = new string[Max];
             public static Node head;
-
-            public Stack()
-            {
-
-            }
             public bool isEmpty()
             {
                 return (top < 0);
@@ -57,6 +51,8 @@ namespace DSALab_5
                 if (head == null)
                 {
                     head = new Node();
+                    counter++;
+                    return;
                 }
 
                 Node new_node = new Node();
@@ -67,12 +63,18 @@ namespace DSALab_5
                     last = last.next;
 
                 last.next = new_node;
+                counter++;
                 return;
             }
 
             internal string pop()
             {
                 Node last = head, prev = null;
+                if (head == null)
+                {
+                    Console.WriteLine("List Is Empty...!!");
+                    return null;
+                }
                 while (last.next != null)
                 {
                     prev = last;
@@ -82,6 +84,7 @@ namespace DSALab_5
                     return null;
 
                 prev.next = last.next;
+                counter--;
                 return last.data;
             }
 
@@ -114,10 +117,13 @@ namespace DSALab_5
                     Console.Write("Items In The Stack Are : ");
                     for (int i = top; i >= 0; i--)
                     {
-                        Console.Write("{0}, ", stack[i]);
+                        Console.Write("{0}, ", counter);
                     }
                     Console.WriteLine();
                 }
+            }
+            public int getCount() {
+                return counter;
             }
         }
 
