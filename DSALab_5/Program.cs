@@ -41,10 +41,6 @@ namespace DSALab_5
             static int counter;
             int top;
             public static Node head;
-            public bool isEmpty()
-            {
-                return (top < 0);
-            }
 
             internal void push()
             {
@@ -125,6 +121,9 @@ namespace DSALab_5
             public int getCount() {
                 return counter;
             }
+            public bool isEmpty() {
+                return head == null;
+            }
         }
 
         static void Main(string[] args)
@@ -136,6 +135,7 @@ namespace DSALab_5
             stack.printList();
             string last = stack.pop();
             Console.WriteLine("The Popped Item Is {0}", last);
+            Console.WriteLine("The Total Item In The List Are: {0}", stack.getCount());
             stack.printList();
             Console.ReadLine();
         }
