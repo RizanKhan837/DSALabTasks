@@ -49,8 +49,7 @@ namespace DSALab_5
                     Console.WriteLine("List Is Empty...!!");
                     return null;
                 }
-                while (last.next != null)
-                {
+                while (last.next != null) {
                     prev = last;
                     last = last.next;
                 }
@@ -105,7 +104,8 @@ namespace DSALab_5
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello World!");
-            /*Stack stack = new Stack();
+            Stack stack = new Stack();
+            stack.push();
             stack.push();
             stack.push();
             stack.printList();
@@ -113,7 +113,7 @@ namespace DSALab_5
             Console.WriteLine("The Popped Item Is {0}", last);
             Console.WriteLine("The Total Item In The List Are: {0}", stack.getCount());
             stack.printList();
-            Console.ReadLine();*/
+            Console.ReadLine();
         }
     }
 }
