@@ -43,8 +43,7 @@ namespace DSALab_5
             internal string pop()
             {
                 Node last = head, prev = null;
-                if (head == null)
-                {
+                if (head == null) {
                     Console.WriteLine("List Is Empty...!!");
                     return null;
                 }
