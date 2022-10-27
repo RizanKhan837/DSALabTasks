@@ -8,8 +8,7 @@ namespace DSALab_5
         {
             public string data;
             public Node next;
-            public Node()
-            {
+            public Node() {
                 Console.Write("Enter Data : ");
                 this.data = Console.ReadLine();
                 next = null;
@@ -104,7 +103,7 @@ namespace DSALab_5
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello World!");
-            Stack stack = new Stack();
+            /*Stack stack = new Stack();
             stack.push();
             stack.push();
             stack.push();
@@ -112,7 +111,7 @@ namespace DSALab_5
             string last = stack.pop();
             Console.WriteLine("The Popped Item Is {0}", last);
             Console.WriteLine("The Total Item In The List Are: {0}", stack.getCount());
-            stack.printList();
+            stack.printList();*/
             Console.ReadLine();
         }
     }
