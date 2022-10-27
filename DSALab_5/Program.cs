@@ -18,7 +18,6 @@ namespace DSALab_5
         internal class Stack
         {
             static int counter;
-            int top;
             public static Node head;
 
             internal void push()
@@ -63,8 +62,7 @@ namespace DSALab_5
                 return last.data;
             }
 
-            internal void peek()
-            {
+            internal void peek() {
                 Node last = head;
                 while (last.next != null)
                     last = last.next;
@@ -73,8 +71,7 @@ namespace DSALab_5
             internal void printList()
             {
                 Node node = head;
-                while (node != null)
-                {
+                while (node != null) {
                     Console.WriteLine(node.data + " ");
                     node = node.next;
                 }
@@ -82,13 +79,11 @@ namespace DSALab_5
 
             internal void printStack()
             {
-                if (counter <= 0)
-                {
+                if (counter <= 0) {
                     Console.WriteLine("Stack Underflow");
                     return;
                 }
-                else
-                {
+                else {
                     Node node = head;
                     Console.Write("Items In The Stack Are : ");
                     for (int i = counter; i >= 0; i--)
