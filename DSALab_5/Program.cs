@@ -18,7 +18,6 @@ namespace DSALab_5
         {
             static int counter;
             public static Node head;
-
             internal void push()
             {
                 if (head == null)
@@ -40,6 +39,38 @@ namespace DSALab_5
                 return;
             }
 
+            public void menu(Stack stack) {
+                int inp;
+                Console.WriteLine("/*------Stacks-------*/");
+                Console.Write("\tChoose One Option...\n" +
+                                  "1. Push\n" +
+                                  "2. Pop\n" +
+                                  "3. Is Empty?\n" +
+                                  "4. Display\n" +
+                                  "5. Count\n" +
+                                  "Enter Option : ");
+                int opt = Convert.ToInt32(Console.ReadLine());
+                switch (opt)
+                {
+                    case 1:
+                        stack.push(); break;
+                    case 2:
+                        string last = stack.pop();
+                        Console.WriteLine("The Popped Item Is {0}", last);
+                        break;
+                    case 3:
+                        isEmpty(); break;
+                    case 4:
+                        printList(); break;
+                    case 5:
+                        Console.WriteLine("The Total Item In The List Are: {0}", stack.getCount());
+                        break;
+                    default:
+                        Console.WriteLine("Wrong Input..!!");
+                        break;
+                }
+                menu(stack);
+            }
             internal string pop()
             {
                 Node last = head, prev = null;
@@ -97,19 +128,13 @@ namespace DSALab_5
             public bool isEmpty() {
                 return head == null;
             }
+
         }
 
         static void Main(string[] args)
         {
-            /*Stack stack = new Stack();
-            stack.push();
-            stack.push();
-            stack.printList();
-            string last = stack.pop();
-            Console.WriteLine("The Popped Item Is {0}", last);
-            Console.WriteLine("The Total Item In The List Are: {0}", stack.getCount());
-            stack.printList();
-            Console.ReadLine();*/
+            Stack stack = new Stack();
+            stack.menu(stack);
         }
     }
 }
