@@ -42,7 +42,8 @@ namespace DSALab_5
             public void menu(Stack stack) {
                 int inp;
                 Console.WriteLine("/*------Stacks-------*/");
-                Console.Write("\tChoose One Option...\n" +
+                Console.WriteLine("/*-------------------*/\n");
+                Console.Write("Choose One Option...\n" +
                                   "1. Push\n" +
                                   "2. Pop\n" +
                                   "3. Is Empty?\n" +
@@ -59,7 +60,7 @@ namespace DSALab_5
                         Console.WriteLine("The Popped Item Is {0}", last);
                         break;
                     case 3:
-                        isEmpty(); break;
+                        Console.WriteLine("isEmpty? = {0}", isEmpty()); break;
                     case 4:
                         printList(); break;
                     case 5:
@@ -69,6 +70,7 @@ namespace DSALab_5
                         Console.WriteLine("Wrong Input..!!");
                         break;
                 }
+                Console.WriteLine();
                 menu(stack);
             }
             internal string pop()
@@ -78,18 +80,19 @@ namespace DSALab_5
                     Console.WriteLine("List Is Empty...!!");
                     return null;
                 }
+
                 while (last.next != null) {
                     prev = last;
                     last = last.next;
                 }
-                if (last == null)
-                    return null;
-
                 prev.next = last.next;
                 counter--;
-                return last.data;
-            }
 
+                if (last != null) {
+                    return last.data;
+                }
+                return null;
+            }
             internal void peek() {
                 Node last = head;
                 while (last.next != null)
@@ -128,7 +131,6 @@ namespace DSALab_5
             public bool isEmpty() {
                 return head == null;
             }
-
         }
 
         static void Main(string[] args)
