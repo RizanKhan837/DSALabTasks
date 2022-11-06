@@ -30,7 +30,7 @@ namespace DSALab_6
             Console.WriteLine("HCF of " + x + " and " + y + " is: " + Hcf(x, y));
             Console.ReadLine();*/
 
-            Console.WriteLine();
+            /*Console.WriteLine();*/
 
             //SumOfDigit(123);
 
