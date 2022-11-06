@@ -14,11 +14,7 @@ namespace DSALab_6
 
         static void Main(string[] args)
         {
-            SearchForFile("D:\\Movies");
-            foreach (var item in result) {
-                Console.WriteLine(item);
-            }
-            Console.ReadLine();
+            
 
             /*recSeq(6);
             Console.WriteLine();*/
@@ -41,7 +37,13 @@ namespace DSALab_6
             /*SqrOdd(1);*/
 
             /* Hcf Of 2 Digit */
-            
+
+            /*SearchForFile("D:\\Movies");
+            foreach (var item in result) {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();*/
+
 
             Console.ReadLine();
         }
