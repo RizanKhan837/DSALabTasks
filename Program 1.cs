@@ -14,25 +14,15 @@ namespace DSALab_6
 
         static void Main(string[] args)
         {
-            SearchForFile("D:\\Movies");
-            foreach (var item in result) {
+            //Console.WriteLine("Hello World");
+
+            recSeq(6);
+            Console.WriteLine();
+            SearchForFile("C:\\Users\\Spring2020\\Downloads");
+            foreach (var item in result)
+            {
                 Console.WriteLine(item);
             }
-            Console.ReadLine();
-
-            /*recSeq(6);
-            Console.WriteLine();*/
-
-            /*SqrOdd(1);
-            Console.ReadLine();*/
-
-            /*SumOfDigit(123);
-            Console.ReadLine();*/
-
-            /* int x = 250;
-            int y = 475;
-            Console.WriteLine("HCF of " + x + " and " + y + " is: " + Hcf(x, y));
-            Console.ReadLine();*/
 
             Console.WriteLine();
 
@@ -40,13 +30,9 @@ namespace DSALab_6
 
             /*SqrOdd(1);*/
 
-            /* Hcf Of 2 Digit */
-            
-
             Console.ReadLine();
         }
-        public int Recursive(int param)
-        {
+        public int Recursive(int param) {
             return (param == 0) ? 0 : Recursive(param - 1) + param;
             /* Rec(5)
                 Rec(4) + 5 => 10+5
@@ -56,8 +42,7 @@ namespace DSALab_6
                                 Rec(0) + 1 => 0+1*/
         }
 
-        public long Factorial(int n)
-        {  // Iterative
+        public long Factorial(int n) {  // Iterative
             if (n == 0)
                 return 1;
             long value = 1;
@@ -65,13 +50,6 @@ namespace DSALab_6
                 value *= i;
 
             return value;
-        }
-
-        static int Hcf(int x, int y)
-        {
-            if (y == 0)
-                return x;
-            return Hcf(y, x % y);
         }
         public long FactorialRec(int n)
         {
@@ -85,8 +63,7 @@ namespace DSALab_6
                              1 * Fac(0) => 1*/
         }
 
-        public static double Series(int n)
-        {
+        public static double Series(int n) {
             if (n == 0) {
                 return 1;
             }
@@ -100,6 +77,7 @@ namespace DSALab_6
             if (n > 1)
             {
                 recSeq(n - 1);
+
                 /* Rec(5) => 2**4
                       Rec(4) => 2**3
                           Rec(3) => 2**2
@@ -107,11 +85,11 @@ namespace DSALab_6
                 */
                 Console.WriteLine("{0}", Math.Pow(2, n - 1));
             }
-            else
+            else {
                 Console.WriteLine(1);
+            }
         }
-        public static int SqrOdd(int num)
-        {
+        public static int SqrOdd(int num) {
             if (num > 20) {
                 return 1;
             }
@@ -119,36 +97,31 @@ namespace DSALab_6
             return SqrOdd(num + 2);
         }
 
-        public static void SumOfDigit(int num)
-        {
+        public static void SumOfDigit(int num) {
             int sum = 0;
-            while (num > 0) {
+            while (num > 0)
+            {
                 sum += num % 10; // 123 = 3
                 num /= 10; // 12
             }
             Console.WriteLine(sum);
         }
-
-        public static void SearchForFile(string path)
-        {
+        
+        public static void SearchForFile(string path) {
             try
             {
-                foreach (string fileName in Directory.GetFiles(path))
-                { //Gets aLL fiLes in the current pat 
+                foreach (string fileName in Directory.GetFiles(path)){ //Gets aLL fiLes in the current pat 
                     result.Add(fileName);
                 }
 
-                foreach (string directory in Directory.GetDirectories(path))
-                { //Gets aLL foLders in the current path 
+                foreach (string directory in Directory.GetDirectories(path)) { //Gets aLL foLders in the current path 
                     SearchForFile(directory); //The methods caLLs itseLf with a new parameter, here! 
                 }
-            }
-            catch (System.Exception ex)
-            {
-                errors.Add(path, ex.Message); //Stores Error Messages in a dictionary with path in key 
+            } catch (System.Exception ex){
+                errors.Add(path, ex.Message);//Stores Error Messages in a dictionary with path in key 
             }
         }
     }
 }
 
-
+       
