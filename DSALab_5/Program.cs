@@ -42,7 +42,7 @@ namespace DSALab_5
             public void menu(Stack stack) {
                 int inp;
                 Console.WriteLine("/*------Stacks-------");
-                Console.WriteLine("/*-------------------\n");
+                //Console.WriteLine("/*-------------------\n");
                 Console.Write("Choose One Option...\n" +
                                   "1. Push\n" +
                                   "2. Pop\n" +
