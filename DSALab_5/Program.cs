@@ -145,8 +145,8 @@ namespace DSALab_5
 
         static void Main(string[] args)
         {
-            /*Stack stack = new Stack();
-            stack.menu(stack);*/
+            Stack stack = new Stack();
+            stack.menu(stack);
         }
     }
 }
