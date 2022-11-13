@@ -145,7 +145,7 @@ namespace DSALab_6
             }
             catch (System.Exception ex)
             {
-                errors.Add(path, ex.Message); //Stores Error Messages in a dictionary with path in key 
+                errors.Add(path, ex.Message);
             }
         }
     }
