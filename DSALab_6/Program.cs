@@ -15,7 +15,6 @@ namespace DSALab_6
         static void Main(string[] args)
         {
             
-
             /*recSeq(6);
             Console.WriteLine();*/
 
