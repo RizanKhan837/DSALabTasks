@@ -41,8 +41,8 @@ namespace DSALab_5
 
             public void menu(Stack stack) {
                 int inp;
-                Console.WriteLine("/*------Stacks-------*/");
-                Console.WriteLine("/*-------------------*/\n");
+                Console.WriteLine("/*------Stacks-------");
+                Console.WriteLine("/*-------------------\n");
                 Console.Write("Choose One Option...\n" +
                                   "1. Push\n" +
                                   "2. Pop\n" +
@@ -71,29 +71,34 @@ namespace DSALab_5
                         break;
                 }
                 Console.WriteLine();
-                menu(stack);
+                menu(stack); 
             }
             internal string pop()
             {
                 Node last = head, prev = null;
-                if (head == null) {
+                if (head == null)
+                {
                     Console.WriteLine("List Is Empty...!!");
                     return null;
                 }
 
-                while (last.next != null) {
+                while (last.next != null)
+                {
                     prev = last;
                     last = last.next;
                 }
+
                 prev.next = last.next;
                 counter--;
 
-                if (last != null) {
+                if (last != null)
+                {
                     return last.data;
                 }
                 return null;
             }
-            internal void peek() {
+            internal void peek()
+            {
                 Node last = head;
                 while (last.next != null)
                     last = last.next;
@@ -102,7 +107,8 @@ namespace DSALab_5
             internal void printList()
             {
                 Node node = head;
-                while (node != null) {
+                while (node != null)
+                {
                     Console.WriteLine(node.data + " ");
                     node = node.next;
                 }
@@ -110,11 +116,13 @@ namespace DSALab_5
 
             internal void printStack()
             {
-                if (counter <= 0) {
+                if (counter <= 0)
+                {
                     Console.WriteLine("Stack Underflow");
                     return;
                 }
-                else {
+                else
+                {
                     Node node = head;
                     Console.Write("Items In The Stack Are : ");
                     for (int i = counter; i >= 0; i--)
@@ -125,18 +133,20 @@ namespace DSALab_5
                     Console.WriteLine();
                 }
             }
-            public int getCount() {
+            public int getCount()
+            {
                 return counter;
             }
-            public bool isEmpty() {
+            public bool isEmpty()
+            {
                 return head == null;
             }
         }
 
         static void Main(string[] args)
         {
-            Stack stack = new Stack();
-            stack.menu(stack);
+            /*Stack stack = new Stack();
+            stack.menu(stack);*/
         }
     }
 }
