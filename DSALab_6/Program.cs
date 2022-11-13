@@ -104,8 +104,7 @@ namespace DSALab_6
                 /* Rec(5) => 2**4
                       Rec(4) => 2**3
                           Rec(3) => 2**2
-                             Rec(2) => 2**1
-                */
+                             Rec(2) => 2**1 */
                 Console.WriteLine("{0}", Math.Pow(2, n - 1));
             }
             else
@@ -135,7 +134,7 @@ namespace DSALab_6
             try
             {
                 foreach (string fileName in Directory.GetFiles(path))
-                { //Gets aLL fiLes in the current pat 
+                { //Gets aLL fiLes in the current path
                     result.Add(fileName);
                 }
 
