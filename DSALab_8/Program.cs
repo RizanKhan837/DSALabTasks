@@ -99,11 +99,11 @@ namespace DSALab_8
             Console.WriteLine("Hello World!");
             Queue queue = new Queue();
 
-            queue.Enqueue("Hello World");
+            /*queue.Enqueue("Hello World");
             queue.Enqueue("Hi..");
             queue.Enqueue("How");
             queue.Enqueue("are");
-            queue.Enqueue("You");
+            queue.Enqueue("You");*/
 
             queue.Enqueue("Rizan");
             queue.Enqueue("Khan");
