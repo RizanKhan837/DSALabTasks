@@ -30,8 +30,7 @@ namespace DSALab_7
                     Console.WriteLine("Messages is Full...Delete Some Messages!! \n");
                     return true;
                 }
-                else
-                {
+                else {
                     return false;
                 }
             }
@@ -48,7 +47,6 @@ namespace DSALab_7
                     front = 0;
                     rear = 0;
                     Messages[rear] = message;
-
                 }
                 else
                 {
