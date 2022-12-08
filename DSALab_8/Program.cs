@@ -78,7 +78,7 @@ namespace DSALab_8
             obj.set_Right("E", 1);
             obj.set_Left("F", 2);
             obj.set_Right("G", 2);
-            obj.print_Tree();
+            //obj.print_Tree();
             obj.preOrder();
 
             Console.ReadLine();
