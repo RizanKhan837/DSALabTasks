@@ -71,7 +71,7 @@ namespace DSALab_8
         static void Main(string[] args)
         {
             BinaryTree obj = new BinaryTree();
-            obj.Root("A");
+            /*obj.Root("A");
             obj.set_Left("B", 0);
             obj.set_Right("C", 0);
             obj.set_Left("D", 1);
@@ -79,7 +79,7 @@ namespace DSALab_8
             obj.set_Left("F", 2);
             obj.set_Right("G", 2);
             obj.print_Tree();
-            obj.preOrder();
+            obj.preOrder();*/
 
             Console.ReadLine();
         }
