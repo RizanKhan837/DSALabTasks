@@ -47,6 +47,51 @@ namespace BinaryTreeExample
             // Recursively traverse the right subtree
             PreOrderTraversal(node.Right);
         }
+
+        public void PostOrderTraversal()
+        {
+            Console.Write("Post-order traversal: ");
+            PostOrderTraversal(Root);
+            Console.WriteLine();
+        }
+
+        private void PostOrderTraversal(Node node)
+        {
+            if (node == null) {
+                return;
+            }
+
+            // Recursively traverse the left subtree
+            PostOrderTraversal(node.Left);
+
+            // Recursively traverse the right subtree
+            PostOrderTraversal(node.Right);
+
+            // Print the value of the current node
+            Console.Write($"{node.Value} ");
+        }
+        public void InOrderTraversal()
+        {
+            Console.Write("In-order traversal: ");
+            InOrderTraversal(Root);
+            Console.WriteLine();
+        }
+
+        private void InOrderTraversal(Node node)
+        {
+            if (node == null) {
+                return;
+            }
+
+            // Recursively traverse the left subtree
+            InOrderTraversal(node.Left);
+
+            // Print the value of the current node
+            Console.Write($"{node.Value} ");
+
+            // Recursively traverse the right subtree
+            InOrderTraversal(node.Right);
+        }
     }
 
     class Program
@@ -60,9 +105,17 @@ namespace BinaryTreeExample
             tree.Root.Right = new Node(3);
             tree.Root.Left.Left = new Node(4);
             tree.Root.Left.Right = new Node(5);
+            tree.Root.Right.Left = new Node(6);
+            tree.Root.Right.Right = new Node(7);
 
-            // Perform a pre-order traversal and print the values
+            /*            1
+             *       2         3
+             *     4   5     6   7          
+             */            
+
             tree.PreOrderTraversal();
+            tree.PostOrderTraversal();
+            tree.InOrderTraversal();
 
             Console.ReadLine();
         }
