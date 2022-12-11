@@ -10,8 +10,7 @@ namespace BinaryTreeExample
         public Node Left { get; set; }
         public Node Right { get; set; }
 
-        public Node(int value)
-        {
+        public Node(int value) {
             this.Value = value;
         }
     }
@@ -20,8 +19,7 @@ namespace BinaryTreeExample
     {
         public Node Root { get; set; }
 
-        public BinaryTree()
-        {
+        public BinaryTree() {
             this.Root = null;
         }
 
@@ -66,7 +64,7 @@ namespace BinaryTreeExample
             // Perform a pre-order traversal and print the values
             tree.PreOrderTraversal();
 
-            Console.ReadLine
+            Console.ReadLine();
         }
     }
 }
