@@ -15,7 +15,6 @@ namespace DSALab_7
             int i = 0;
             int msgIndex = 0;
 
-
             public bool IsEmpty(int front, int rear)
             {
                 if (front == -1 && rear == -1)
@@ -27,7 +26,7 @@ namespace DSALab_7
             {
                 if (rear == Messages.Length - 1)
                 {
-                    Console.WriteLine("Messages is Full...Delete Some Messages!! \n");
+                    //Console.WriteLine("Messages is Full...Delete Some Messages!! \n");
                     return true;
                 }
                 else {
@@ -57,8 +56,7 @@ namespace DSALab_7
             public void Dequeue()
             {
                 int index = 0;
-                if (IsEmpty(rear, front))
-                {
+                if (IsEmpty(rear, front)) {
                     return;
                 }
                 else if (front == rear)
@@ -78,8 +76,9 @@ namespace DSALab_7
                     }
 
                     Messages[rear] = MessageBuffer[index].ToString();
+                    
                     MessageBuffer.RemoveAt(index);
-                    rear = rear + 1;
+                    rear++;
                 }
 
             }
@@ -98,31 +97,36 @@ namespace DSALab_7
         {
             Queue queue = new Queue();
 
-            /*queue.Enqueue("Hello World");
-            queue.Enqueue("Hi..");
+            queue.Enqueue("Hello World");
+            queue.Enqueue("Hi");
             queue.Enqueue("How");
             queue.Enqueue("are");
-            queue.Enqueue("You");*/
+            queue.Enqueue("You");
 
             queue.Enqueue("Rizan");
             queue.Enqueue("Khan");
 
-            Console.WriteLine("Messages:");
+            Console.WriteLine("\nMessages:");
             queue.PrintArray();
             Console.WriteLine();
 
-            Console.WriteLine("Buffer Messages:");
-            foreach (var item in queue.MessageBuffer)
-            {
+            Console.WriteLine("\nBuffer Messages:");
+            foreach (var item in queue.MessageBuffer) {
                 Console.WriteLine(item);
             }
 
             queue.Dequeue();
 
+            Console.WriteLine("\nBuffer Messages:");
+            foreach (var item in queue.MessageBuffer)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\nNew Messages:");
             queue.PrintArray();
 
             Console.ReadLine();
-
         }
     }
 }
