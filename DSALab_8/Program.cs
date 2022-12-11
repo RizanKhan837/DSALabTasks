@@ -118,6 +118,53 @@ namespace BinaryTreeExample
             tree.InOrderTraversal();
 
             Console.ReadLine();
+
+            // Create an array of random numbers to sort
+            int[] numbers = new int[] { 12, 4, 6, 5, 3, 8, 7, 1, 2, 9, 10, 11 };
+
+            // Use bucket sort to sort the array
+            BucketSort(numbers);
+
+            // Print the sorted array
+            Console.WriteLine(string.Join(", ", numbers));
+        }
+
+        static void BucketSort(int[] array)
+        {
+            // Create a list of buckets
+            List<int>[] buckets = new List<int>[array.Length];
+            for (int i = 0; i < buckets.Length; i++)
+            {
+                buckets[i] = new List<int>();
+            }
+
+            // Distribute the numbers into the buckets
+            foreach (int number in array)
+            {
+                buckets[number].Add(number);
+            }
+
+            // Sort the numbers in each bucket
+            foreach (List<int> bucket in buckets)
+            {
+                bucket.Sort();
+            }
+
+            // Gather the numbers back into the array in order
+            int index = 0;
+            foreach (List<int> bucket in buckets)
+            {
+                foreach (int number in bucket)
+                {
+                    array[index++] = number;
+                }
+            }
+        }
+
+        // The sort method for sorting the numbers in each bucket
+        static void Sort(List<int> bucket)
+        {
+            // Implement the sorting algorithm here
         }
     }
 }
