@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace BinaryTreeExample
 {
     // Define a node in the binary tree
-    public class Node
+    /*public class Node
     {
         public int Value { get; set; }
         public Node Left { get; set; }
@@ -13,9 +13,9 @@ namespace BinaryTreeExample
         public Node(int value) {
             this.Value = value;
         }
-    }
+    }*/
 
-    public class BinaryTree
+    /*public class BinaryTree
     {
         public Node Root { get; set; }
 
@@ -90,13 +90,52 @@ namespace BinaryTreeExample
             // Recursively traverse the right subtree
             InOrderTraversal(node.Right);
         }
+    }*/
+
+    class Node
+    {
+        public int Data { get; set; }
+        public Node Next { get; set; }
+    }
+
+    class LinkedList
+    {
+        public Node head;
+
+        public void Add(int data)
+        {
+            if (head == null)
+            {
+                head = new Node { Data = data };
+            }
+            else
+            {
+                Node current = head;
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+                current.Next = new Node { Data = data };
+            }
+        }
+
+        public void Print()
+        {
+            Node current = head;
+            while (current != null)
+            {
+                Console.Write(current.Data + " ");
+                current = current.Next;
+            }
+            Console.WriteLine();
+        }
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            // Create a binary tree
+            /*// Create a binary tree
             BinaryTree tree = new BinaryTree();
             tree.Root = new Node(1);
             tree.Root.Left = new Node(2);
@@ -106,81 +145,68 @@ namespace BinaryTreeExample
             tree.Root.Right.Left = new Node(6);
             tree.Root.Right.Right = new Node(7);
 
-            /*            1
+            *//*            1
              *       2         3
              *     4   5     6   7          
-             */            
+             *//*            
 
             tree.PreOrderTraversal();
             tree.PostOrderTraversal();
-            tree.InOrderTraversal();
+            tree.InOrderTraversal();*/
 
-            Console.ReadLine();
 
-            // Create an array of random numbers to sort
-            int[] numbers = new int[] { 12, 4, 6, 5, 3, 8, 7, 1, 2, 9, 10, 11 };
+            /*  Bucket Sort   */
 
-            // Use bucket sort to sort the array
-            BucketSort(numbers);
+            int[] array = { 4, 1, 3, 2, 5 };
+            int min = array[0];
+            int max = array[0];
 
-            // Print the sorted array
-            Console.WriteLine(string.Join(", ", numbers));
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] < min)
+                {
+                    min = array[i];
+                }
+                if (array[i] > max)
+                {
+                    max = array[i];
+                }
+            }
 
-            Console.ReadLine();
-        }
+            int range = max - min + 1;
+            LinkedList[] buckets = new LinkedList[range];
 
-        static void BucketSort(int[] array)
-        {
-            // Create a list of buckets
-            List<int>[] buckets = new List<int>[array.Length + 1];
+            for (int i = 0; i < array.Length; i++)
+            {
+                int index = array[i] - min;
+                if (buckets[index] == null)
+                {
+                    buckets[index] = new LinkedList();
+                }
+                buckets[index].Add(array[i]);
+            }
+
+            int k = 0;
             for (int i = 0; i < buckets.Length; i++)
             {
-                buckets[i] = new List<int>();
-            }
-
-            // Distribute the numbers into the buckets
-            foreach (int number in array)
-            {
-                buckets[number].Add(number);
-            }
-
-            // Sort the numbers in each bucket
-            foreach (List<int> bucket in buckets)
-            {
-                bucket.Sort();
-            }
-
-            // Gather the numbers back into the array in order
-            int index = 0;
-            foreach (List<int> bucket in buckets)
-            {
-                foreach (int number in bucket)
+                if (buckets[i] != null)
                 {
-                    array[index++] = number;
-                }
-            }
-        }
-
-        // The sort method for sorting the numbers in each bucket
-        static void Sort(List<int> bucket)
-        {
-            for (int i = 0; i < bucket.Count - 1; i++)
-            {
-                int minIndex = i;
-                for (int j = i + 1; j < bucket.Count; j++)
-                {
-                    if (bucket[j] < bucket[minIndex])
+                    Node current = buckets[i].head;
+                    while (current != null)
                     {
-                        minIndex = j;
+                        array[k++] = current.Data;
+                        current = current.Next;
                     }
                 }
-                if (minIndex != i)
-                {
-                    int temp = bucket[i];
-                    bucket[i] = bucket[minIndex];
-                    bucket[minIndex] = temp;
-                }
             }
+
+            Console.WriteLine("Sorted array: ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i] + " ");
+            }
+
+            Console.ReadLine();
         }
     }
 }
