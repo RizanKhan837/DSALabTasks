@@ -33,8 +33,7 @@ namespace BinaryTreeExample
 
         private void PreOrderTraversal(Node node)
         {
-            if (node == null)
-            {
+            if (node == null) {
                 return;
             }
 
@@ -54,7 +53,6 @@ namespace BinaryTreeExample
             PostOrderTraversal(Root);
             Console.WriteLine();
         }
-
         private void PostOrderTraversal(Node node)
         {
             if (node == null) {
@@ -127,12 +125,14 @@ namespace BinaryTreeExample
 
             // Print the sorted array
             Console.WriteLine(string.Join(", ", numbers));
+
+            Console.ReadLine();
         }
 
         static void BucketSort(int[] array)
         {
             // Create a list of buckets
-            List<int>[] buckets = new List<int>[array.Length];
+            List<int>[] buckets = new List<int>[array.Length + 1];
             for (int i = 0; i < buckets.Length; i++)
             {
                 buckets[i] = new List<int>();
@@ -164,7 +164,23 @@ namespace BinaryTreeExample
         // The sort method for sorting the numbers in each bucket
         static void Sort(List<int> bucket)
         {
-            // Implement the sorting algorithm here
+            for (int i = 0; i < bucket.Count - 1; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < bucket.Count; j++)
+                {
+                    if (bucket[j] < bucket[minIndex])
+                    {
+                        minIndex = j;
+                    }
+                }
+                if (minIndex != i)
+                {
+                    int temp = bucket[i];
+                    bucket[i] = bucket[minIndex];
+                    bucket[minIndex] = temp;
+                }
+            }
         }
     }
 }
