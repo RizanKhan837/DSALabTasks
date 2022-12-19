@@ -95,7 +95,7 @@ namespace DSALab_7
 
         static void Main(string[] args)
         {
-            Queue queue = new Queue();
+            /*Queue queue = new Queue();
 
             queue.Enqueue("Hello World");
             queue.Enqueue("Hi");
@@ -124,9 +124,80 @@ namespace DSALab_7
             }
 
             Console.WriteLine("\nNew Messages:");
-            queue.PrintArray();
+            queue.PrintArray();*/
+
+            /*  Merge Sort   */
+
+            char[] array = { 'd', 'b', 'a', 'e', 'c', 'f', 'h', 'g', 'i', 'j' };
+
+            Console.WriteLine("Original array: " + string.Join(", ", array));
+
+            MergeSort(array, 0, array.Length - 1);
+
+            Console.WriteLine("Sorted array: " + string.Join(", ", array));
 
             Console.ReadLine();
+        }
+
+        static void MergeSort(char[] array, int start, int end)
+        {
+            if (start < end)
+            {
+                int middle = (start + end) / 2;
+                MergeSort(array, start, middle);
+                MergeSort(array, middle + 1, end);
+                Merge(array, start, middle, end);
+            }
+        }
+
+        static void Merge(char[] array, int start, int middle, int end)
+        {
+            int n1 = middle - start + 1;
+            int n2 = end - middle;
+
+            char[] left = new char[n1];
+            char[] right = new char[n2];
+
+            for (int x = 0; x < n1; x++)
+            {
+                left[x] = array[start + x];
+            }
+            for (int y = 0; y < n2; y++)
+            {
+                right[y] = array[middle + 1 + y];
+            }
+
+            int i = 0;
+            int j = 0;
+            int k = start;
+            while (i < n1 && j < n2)
+            {
+                if (left[i] <= right[j])
+                {
+                    array[k] = left[i];
+                    i++;
+                }
+                else
+                {
+                    array[k] = right[j];
+                    j++;
+                }
+                k++;
+            }
+
+            while (i < n1)
+            {
+                array[k] = left[i];
+                i++;
+                k++;
+            }
+
+            while (j < n2)
+            {
+                array[k] = right[j];
+                j++;
+                k++;
+            }
         }
     }
 }
