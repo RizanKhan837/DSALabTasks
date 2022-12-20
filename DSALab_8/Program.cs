@@ -206,7 +206,6 @@ namespace BinaryTreeExample
                 Console.Write(array[i] + " ");
             }
 
-            Console.ReadLine();
         }
     }
 }
