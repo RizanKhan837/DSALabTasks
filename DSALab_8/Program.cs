@@ -200,7 +200,7 @@ namespace BinaryTreeExample
                 }
             }
 
-            Console.WriteLine("Sorted array: ");
+            //Console.WriteLine("Sorted array: ");
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
