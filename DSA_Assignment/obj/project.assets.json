@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\OneDrive\\DSA Lab Tasks Code\\DSALab_9\\DSALab_9.csproj",
-      "projectName": "DSALab_9",
-      "projectPath": "C:\\Users\\HP\\OneDrive\\DSA Lab Tasks Code\\DSALab_9\\DSALab_9.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\OneDrive\\DSA Lab Tasks Code\\DSA_Assignment\\DSA_Assignment.csproj",
+      "projectName": "DSA_Assignment",
+      "projectPath": "C:\\Users\\HP\\OneDrive\\DSA Lab Tasks Code\\DSA_Assignment\\DSA_Assignment.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\OneDrive\\DSA Lab Tasks Code\\DSALab_9\\obj\\",
+      "outputPath": "C:\\Users\\HP\\OneDrive\\DSA Lab Tasks Code\\DSA_Assignment\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

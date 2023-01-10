@@ -1,0 +1,5 @@
+C:\Users\HP\OneDrive\DSA Lab Tasks Code\DSA_Assignment\obj\Debug\net5.0\DSA_Assignment.csproj.AssemblyReference.cache
+C:\Users\HP\OneDrive\DSA Lab Tasks Code\DSA_Assignment\obj\Debug\net5.0\DSA_Assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\OneDrive\DSA Lab Tasks Code\DSA_Assignment\obj\Debug\net5.0\DSA_Assignment.AssemblyInfoInputs.cache
+C:\Users\HP\OneDrive\DSA Lab Tasks Code\DSA_Assignment\obj\Debug\net5.0\DSA_Assignment.AssemblyInfo.cs
+C:\Users\HP\OneDrive\DSA Lab Tasks Code\DSA_Assignment\obj\Debug\net5.0\DSA_Assignment.csproj.CoreCompileInputs.cache
