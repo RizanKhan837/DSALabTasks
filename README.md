@@ -1,15 +1,16 @@
-#Data Structures and Algorithms Programming Labs
+#*Data Structures and Algorithms Programming Labs*
 Welcome to the Data Structures and Algorithms Programming Labs repository! This repository contains the programming labs for the Data Structures and Algorithms course at XYZ University.
 
 The labs in this repository cover a wide range of topics, including:
 
-Arrays
-Linked Lists
-Stacks and Queues
-Trees
-Graphs
-Sorting and Searching Algorithms
-Dynamic Programming
+* Arrays
+* Linked Lists
+* Stacks and Queues
+* Trees
+* Graphs
+* Sorting and Searching Algorithms
+* Dynamic Programming
+
 The labs are implemented in C#. Each lab contains the problem statement, the code, and a report explaining the solution.
 
 #How to use this repository
