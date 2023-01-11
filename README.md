@@ -1,4 +1,4 @@
-#*Data Structures and Algorithms Programming Labs*
+#**Data Structures and Algorithms Programming Labs**
 Welcome to the Data Structures and Algorithms Programming Labs repository! This repository contains the programming labs for the Data Structures and Algorithms course at XYZ University.
 
 The labs in this repository cover a wide range of topics, including:
